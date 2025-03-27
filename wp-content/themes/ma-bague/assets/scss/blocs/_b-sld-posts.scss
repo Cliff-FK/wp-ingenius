@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------*\
+ * B RELATED POSTS
+\*----------------------------------------------------------------------------*/
+
+.b-sld-posts {
+  
+  [class*='o-ctn'] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wbd-gut-2);
+  }
+
+  :is(.c-hdr, .c-hdr>*) {
+    text-align: center;
+    margin: auto;
+  }
+
+  &:not(:has(.o-grp)) .c-cta, .o-grp {
+    margin-inline: auto;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+body.xs:not(.md) .b-sld-posts .swiper {
+  overflow: visible;
+  max-width: 100%;
+}

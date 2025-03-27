@@ -1,0 +1,33 @@
+/*----------------------------------------------------------------------------*\
+ * C FILTERS
+\*----------------------------------------------------------------------------*/
+
+.c-flts {
+  margin-inline: auto;
+  gap: var(--wbd-xs-s) var(--wbd-m);
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 980px;
+  
+  & &_submit {
+    border-width: .1em;
+    border-radius: 2em;
+    line-height: 1.05; // quickfix alignement vertical
+  }
+
+  &_reset {
+    display: flex;
+    font-size: var(--wbd--2);
+    position: absolute;
+    font-style: italic;
+    left: 17%;
+    top: 115%;
+  }
+
+  [flt-type="cta"] {
+    flex: none;
+  }
+
+
+/* -------------------------------------------------------------------------- */
+} // end CSS

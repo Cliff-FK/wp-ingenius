@@ -1,0 +1,161 @@
+/*----------------------------------------------------------------------------*\
+ * BASE - COLORS BY THEMING
+/*----------------------------------------------------------------------------*/
+
+:root { // base/fallback si aucun thème défini
+    --thmBg: var(--wp--preset--color--thm-02);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-4);
+    --thmFlt: var(--wp--preset--color--thm-05);
+    --thmError: var(--thmAcc);
+}
+
+.thm-01 {
+    --thmBg: var(--wp--preset--color--thm-01);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-4);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-02 {
+    --thmBg: var(--wp--preset--color--thm-02);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-4);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-03 {
+    --thmBg: var(--wp--preset--color--thm-03);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-4);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+
+.thm-04 {
+    --thmBg: var(--wp--preset--color--thm-04);
+    --thmTxt: var(--wp--preset--color--thm-02);
+    --thmAcc: var(--wp--preset--color--thm-4);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-05 {
+    --thmBg: var(--wp--preset--color--thm-05);
+    --thmTxt: var(--wp--preset--color--thm-02);
+    --thmAcc: var(--wp--preset--color--thm-4);
+    --thmFlt: var(--wp--preset--color--thm-04);
+}
+
+.thm-06 {
+    --thmBg: var(--wp--preset--color--thm-06);
+    --thmTxt: var(--wp--preset--color--thm-02);
+    --thmAcc: var(--wp--preset--color--thm-3);
+    --thmFlt: var(--wp--preset--color--thm-04);
+}
+
+.thm-1 {
+    --thmBg: var(--wp--preset--color--thm-1);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-01);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-2 {
+    --thmBg: var(--wp--preset--color--thm-2);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-01);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-3 {
+    --thmBg: var(--wp--preset--color--thm-3);
+    --thmTxt: var(--wp--preset--color--thm-05);
+    --thmAcc: var(--wp--preset--color--thm-01);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-4 {
+    --thmBg: var(--wp--preset--color--thm-4);
+    --thmTxt: var(--wp--preset--color--thm-01);
+    --thmAcc: var(--wp--preset--color--thm-01);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-5 {
+    --thmBg: var(--wp--preset--color--thm-5);
+    --thmTxt: var(--wp--preset--color--thm-01);
+    --thmAcc: var(--wp--preset--color--thm-01);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+.thm-6 {
+    --thmBg: var(--wp--preset--color--thm-6);
+    --thmTxt: var(--wp--preset--color--thm-01);
+    --thmAcc: var(--wp--preset--color--thm-01);
+    --thmFlt: var(--wp--preset--color--thm-05);
+}
+
+/*----------------------------------------------------------------------------*\
+*  SLIDERS - COLORS BY THEMING
+/*----------------------------------------------------------------------------*/
+.swiper-pagination-bullet { background-color: var(--thmAcc); }
+.swiper-pagination-bullet-active { background: var(--thmAcc); }
+.swiper-navigation > *  {
+    text-shadow: 1px 0 0 var(--thmBg);
+    background: var(--thmTxt);
+    color: var(--thmBg);
+}
+
+/*----------------------------------------------------------------------------*\
+* ELEMENTS - COLORS THEMING STRUCTURATION
+/*----------------------------------------------------------------------------*/
+::selection {
+    background: rgba(var(--wp--preset--color--thm-6--rgb), .4);
+}
+
+*, a { color: var(--thmTxt); } // a: forced admin color
+[class*='thm-']:not(.wp-block):after { background: var(--thmBg); }
+:is(ul,ol) li:before { color: var(--thmAcc); }
+:is(h1,h2, .u-h1, .u-h2) { color: var(--thmTxt); }
+:is(h3,h4,h5,h6,.u-h3, .u-h4,.u-h5, .u-h6) { color: var(--thmTxt); }
+:is(blockquote, [style*="padding-left"])  {
+    border-left-color: color-mix(in srgb, var(--thmAcc), var(--thmBg) 93%);
+    background: color-mix(in srgb, var(--thmAcc), var(--thmBg) 93%);
+    color: var(--ctaTxt);
+}
+
+:is([class*='cta']:not(:has(a)), [class*='cta-a'] > a ):not(.mce-cta) {
+    &:active { transform: scale(.93); }
+    --ctaTxt: var(--thmAcc); --ctaBg: var(--thmBg); --ctaBrd: var(--thmAcc);
+    background-color: var(--ctaBg);
+    border-color: var(--ctaTxt);
+    color: var(--ctaTxt);
+    &:hover, &.active {
+        --ctaTxt: var(--thmBg); --ctaBg: var(--thmAcc); --ctaBrd: var(--thmAcc);
+        box-shadow: 0 0 0 4px var(--thmBg), 0 0 0 6px var(--ctaBg);
+    }
+    &.outln {
+        --ctaTxt: var(--thmBg); --ctaBg: var(--thmAcc); --ctaBrd: transparent;
+    }
+}
+
+[class*='flt']:before {
+    background: linear-gradient(45deg, var(--thmFlt) 0%, var(--thmFlt) 100%);
+}
+
+/*----------------------------------------------------------------------------*\
+* CTA - COLORS BY THEMING 
+/*----------------------------------------------------------------------------*/
+.u-cta-02,.u-cta-a-02> a { --ctaTxt: var(--wp--preset--color--thm-05) !important; --ctaBg: var(--wp--preset--color--thm-02) !important; }
+.u-cta-03,.u-cta-a-03> a { --ctaTxt: var(--wp--preset--color--thm-05) !important; --ctaBg: var(--wp--preset--color--thm-03) !important; }
+.u-cta-05,.u-cta-a-05> a { --ctaTxt: var(--wp--preset--color--thm-02) !important; --ctaBg: var(--wp--preset--color--thm-05) !important; }
+.u-cta-1, .u-cta-a-1 > a { --ctaTxt: var(--wp--preset--color--thm-05) !important; --ctaBg: var(--wp--preset--color--thm-1) !important; }
+.u-cta-2, .u-cta-a-2 > a { --ctaTxt: var(--wp--preset--color--thm-02) !important; --ctaBg: var(--wp--preset--color--thm-2) !important; }
+.u-cta-3, .u-cta-a-3 > a { --ctaTxt: var(--wp--preset--color--thm-02) !important; --ctaBg: var(--wp--preset--color--thm-3) !important; }
+.u-cta-4, .u-cta-a-4 > a { --ctaTxt: var(--wp--preset--color--thm-02) !important; --ctaBg: var(--wp--preset--color--thm-4) !important; }
+.u-cta-5, .u-cta-a-5 > a { --ctaTxt: var(--wp--preset--color--thm-02) !important; --ctaBg: var(--wp--preset--color--thm-5) !important; }
+.u-cta-6, .u-cta-a-6 > a { --ctaTxt: var(--wp--preset--color--thm-02) !important; --ctaBg: var(--wp--preset--color--thm-6) !important; }
+:is([class*='u-cta-']:not(:has(a)), [class*='u-cta-a'] > a ):not(.mce-cta) { border-color: var(--ctaBg) !important; }
+
+/*----------------------------------------------------------------------------*/
+// end CSS

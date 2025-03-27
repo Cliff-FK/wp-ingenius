@@ -1,0 +1,34 @@
+/*----------------------------------------------------------------------------*\
+ * C MODALS SCSS
+\*----------------------------------------------------------------------------*/
+
+.c-mdl {
+  display: none; // important
+
+  &_wrp {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &_wrp >* {
+    flex: 1 1 var(--wbd-col-4);
+  }
+
+  &_col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wbd-gut-1);
+  }
+
+  &_wrp.s  { max-width: var(--wbd-col-6); }
+  &_wrp.md { max-width: var(--wbd-col-9); }
+  &_wrp.lg { max-width: var(--wbd-col-12); }
+
+  .c-hdr {
+    text-align: center;
+    font-family: var(--wbd-f1);
+    font-weight: 300;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end global CSS

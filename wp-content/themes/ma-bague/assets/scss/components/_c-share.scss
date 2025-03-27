@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------------------*\
+ * C SOCIALS SHARE
+\*----------------------------------------------------------------------------*/
+
+.c-share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: var(--wbd-s);
+  gap: var(--wbd-m-l);
+
+  &_supttl {
+    flex: 1;
+  }
+
+  &_list {
+    display: flex;
+    align-items: center;
+    gap: var(--wbd-2xs);
+  }
+
+  &_list-item {
+    display: flex;
+    width: var(--wbd-m);
+  }
+
+/* -------------------------------------------------------------------------- */
+} // end CSS

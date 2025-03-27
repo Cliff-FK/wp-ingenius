@@ -1,0 +1,38 @@
+/*----------------------------------------------------------------------------*\
+ * B WALL (small gallery)
+\*----------------------------------------------------------------------------*/
+
+.b-wall {
+  overflow: hidden;
+
+  [class*='o-ctn'] {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--wbd-gut-2);
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color-mix(in srgb, var(--thmTxt) 15%, var(--thmBg));
+    max-width: var(--wbd-6xl-7xl);
+    padding: var(--wbd-m-l);
+    aspect-ratio: 16/9;
+  }
+
+  .c-med {
+    width: 100%;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

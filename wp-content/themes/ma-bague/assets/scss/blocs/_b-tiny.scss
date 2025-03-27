@@ -1,0 +1,29 @@
+/*----------------------------------------------------------------------------*\
+ * B TINY SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-tiny {
+
+    [class*='o-ctn'] {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--wbd-m-xl) var(--wbd-gut-3);
+    }
+
+    [class*='c-hdr'] {
+        text-align: center;
+        margin-inline: auto;
+        flex: 100%;
+    }
+
+    &:not(:has(.c-wisy+.c-wisy)) [class*='o-ctn'] {
+        max-width: var(--wbd-col-9);
+    }
+
+    &:has(.c-wisy) .c-wisy {
+        flex: 1 1 var(--wbd-col-4);
+    }
+    
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

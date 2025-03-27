@@ -1,0 +1,44 @@
+/*----------------------------------------------------------------------------*\
+ * CTA GLOBAL
+ * [data-mce-selected] sont pour le tinymce en back
+/*----------------------------------------------------------------------------*/
+
+:is([class*='cta']:not(:has(a)), [class*='cta-a'] > a) {
+  font-weight: bold;
+  width: fit-content;
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  text-transform: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--wbd-9xl);
+  transition: var(--wbd-transi);
+  font-family: var(--wbd-f2);
+  gap: var(--wbd-2xs-xs); // si on a une icône par exemple
+}
+
+/*----------------------------------------------------------------------------*\
+ * INTERNAL SPACEMENTS BTN // !important possible de par les cta du header
+/*----------------------------------------------------------------------------*/
+
+[class*='cta']:not(:has(a)), [class*="cta-a"] > a, a[data-mce-selected] {
+  padding: var(--wbd-2xs) var(--wbd-xl);
+  font-size: var(--wbd-1);
+}
+
+[class*='cta-xs'], [class*='cta-a-xs'] > a {
+  padding: var(--wbd-4xs) var(--wbd-s);
+  font-size: var(--wbd--1);
+}
+
+[class*='cta-sm'], [class*='cta-a-sm'] > a {
+  padding: var(--wbd-3xs) var(--wbd-m);
+  font-size: var(--wbd-0);
+}
+
+[class*='cta-lg'], [class*='cta-a-lg'] > a {
+  padding: var(--wbd-2xs) var(--wbd-xl);
+  font-size: var(--wbd-2);
+}
+
+/*----------------------------------------------------------------------------*/

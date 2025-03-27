@@ -1,0 +1,136 @@
+/*----------------------------------------------------------------------------*\
+ * O MODAL GENERATED SCSS
+\*----------------------------------------------------------------------------*/
+.o-mdl {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    transform-origin: center center;
+    transition: var(--wbd-transi);
+    height: calc(100vh - var(--wbd-gut-4));
+    margin-top: var(--wbd-gut-2);
+    width: 100vw;
+    opacity: 0;
+    z-index: 9;
+
+    &_body, [class*='ctn'] {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        max-height: 100%;
+        width: 100%;
+    }
+
+    &_body {
+        overflow: auto;
+        gap: var(--wbd-m);
+        transform: scale(.95);
+        transition: var(--wbd-transi);
+    }
+
+    &_item {
+        overflow: auto;
+        object-fit: contain; // fallback
+        background-size: 0; // pour cacher le placeholder de wbd_generate_media() si existant
+    }
+
+    &.active {
+        + .o-mdl {z-index: 8; pointer-events: none !important; }
+        + .o-mdl+.o-mdl {z-index: 7; pointer-events: none !important; }
+        + .o-mdl+.o-mdl+.o-mdl {z-index: 6; pointer-events: none !important; }
+        &:has(iframe) { transition-delay: .3s; }
+        [class*='mdl_body'] { transform: scale(1); }
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    &_close {
+        cursor: pointer;
+        position: absolute;
+        padding: var(--wbd-xs-s);
+        font-size: var(--wbd-3);
+        right: var(--wbd-gut-1);
+        top: calc(var(--wbd-gut)* -.25);
+        transition: var(--wbd-transi);
+        color: var(--thmBg);
+        line-height: .7;
+        z-index: 2; // quifix mobile
+    }
+
+    .swiper-initialized {
+        width: 100%;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .swiper-navigation {
+        position: absolute;
+        justify-content: space-between;
+        width: calc(100% - var(--wbd-m-3xl));
+        color: var(--wp--preset--color--thm-02);
+        transform: translate(-50%, 0);
+        left: 50%;
+        top: 50%;
+        z-index:1;
+    }
+
+    .swiper-navigation > * {
+        border: none;
+        font-weight: 100;
+    }
+
+    :is(img,picture,video,video) {
+        object-fit: cover;
+        height: 100%;
+    }
+    
+    :is(video, iframe) {
+        max-width: var(--wbd-col-9);
+        width: 100vw;
+    }
+
+    *+form {
+        margin-top: var(--wbd-s-m);
+    }
+
+} // end o-mdl
+
+body:not(.lg) .o-mdl_close { 
+    background: var(--thmAcc);
+ }
+
+/*----------------------------------------------------------------------------*\
+ * O MODAL PRE-CLICK SCSS
+\*----------------------------------------------------------------------------*/
+:is([wbd-mdl-id]):not(.o-mdl_item) {
+    cursor: zoom-in;
+}
+
+*:has(>[wbd-mdl-id]:is(img,svg,picture,video):not(.o-mdl_item, [wbd-mdl-id*="http"])):after {
+    content: "\e90c";
+    font-family: "Deficons";
+    display: flex;
+    position: absolute;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    transform-origin: right bottom;
+    transition: var(--wbd-transi);
+    color: var(--wp--preset--color--thm-02);
+    background: var(--thmAcc);
+    font-size: var(--wbd-1);
+    height: var(--wbd-3);
+    width: var(--wbd-3);
+    z-index: 6;
+    bottom: 0;
+    right: 0;
+}
+*:has(>[wbd-mdl-id]:is(img,svg,picture,video):not(.o-mdl_item, [wbd-mdl-id*="http"])):hover:after  {
+    transform: translateZ(0) scale(1.15);
+}
+

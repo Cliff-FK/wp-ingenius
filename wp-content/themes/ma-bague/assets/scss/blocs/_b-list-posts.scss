@@ -1,0 +1,40 @@
+/*----------------------------------------------------------------------------*\
+ * LIST POSTS
+\*----------------------------------------------------------------------------*/
+
+.b-list-posts {
+
+  [class*='ctn'] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wbd-gut-1);
+  }
+
+  [class*='c-hdr'] {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &:not(:has(.o-grp)) .c-cta, .o-grp {
+    margin-inline: auto;
+  }
+
+  &_items {
+    display: grid;
+    gap: var(--wbd-l-xl) var(--wbd-gut-2);
+    grid-template-columns: repeat(auto-fit, minmax(var(--wbd-9xl-10xl), 1fr));
+  }
+
+  &_items.scroll {
+    overflow: scroll;
+    max-height: var(--wbd-col-9);
+    padding-right: var(--wbd-m);
+    padding-bottom: var(--wbd-m);
+  }
+
+  &_empty {
+    text-align: center;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

@@ -1,0 +1,106 @@
+/*----------------------------------------------------------------------------*\
+ * G NICE SELECT - https://bluzky.github.io/nice-select2/
+\*----------------------------------------------------------------------------*/
+
+.nice-select {
+  padding: var(--wbd-m) var(--wbd-s) var(--wbd-xs) var(--wbd-s);
+  transition: var(--wbd-transi);
+  position: relative;
+  cursor: pointer;
+
+  .current {
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    top: -.1em; // quickfix
+  }
+
+  &.disabled {
+    pointer-events: none;
+    &:after { border-color: var(--wp--preset--color--thm-05); }
+    border-color: var(--wp--preset--color--thm-05);
+    color: var(--wp--preset--color--thm-05);
+  }
+
+  .nice-select-dropdown {
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid;
+    transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+    box-shadow: 0 10px 10px -10px var(--wp--preset--color--thm-06), inset 0 0 0 99em color-mix(in srgb, var(--wp--preset--color--thm-02), var(--thmBg) 80%);
+    border-radius: 0 0 var(--wbd-m) var(--wbd-s);
+    max-height: var(--wbd-10xl);
+    padding: var(--wbd-2xs);
+    border-width: 0 1px 1px 1px;
+    transform-origin: 50% -20px;
+    width: calc(100% + 1.5px);
+    transform: scale(.9);
+    margin-top: -2px; // quickfix décalage de la bordure
+    margin-left: -1px; // quickfix décalage de la bordure
+    top: 100%;
+    z-index: 9;
+    opacity: 0;
+    left: 0;
+  }
+
+  .nice-select-dropdown .list {
+    overflow: auto;
+    border-radius: inherit;
+    max-height: var(--wbd-10xl);
+  }
+  
+  &.open {
+    border-radius: var(--wbd-s) var(--wbd-s) 0 0;
+  }
+  &.open .nice-select-dropdown {
+    pointer-events: auto;
+    transform: scale(1);
+    opacity: 1;
+  }
+  &.open:after {
+    transform: rotate(-90deg);
+  }
+
+  .option {
+    cursor: pointer;
+    transition: var(--wbd-transi);
+    padding: var(--wbd-2xs) var(--wbd-xs);
+    &.selected { font-weight: 600; background: color-mix(in srgb, var(--wp--preset--color--thm-06), var(--thmBg) 90%); }
+    &:hover { background: color-mix(in srgb, var(--wp--preset--color--thm-06), var(--thmBg) 90%); }
+    width: 100%; // quickfix
+  }
+
+  &.has-multiple {
+    li:before {
+      content: '';
+      display: inline-block;
+      box-shadow: inset 0 0 0 1.5px;
+      margin-right: 5px;
+      height: .8em;
+      width: .8em;
+    }
+    li.selected:before {
+      box-shadow: inset 0 0 0 2em;
+    }
+  
+  }
+
+  .nice-select-search-box {
+    padding: 5px;
+  }
+
+  .option.disabled {
+    color: var(--wp--preset--color--thm-2);
+    font-weight: 400;
+  }
+  
+  .list::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  
+//----------------------------------------------------------------------------//
+} // end CSS

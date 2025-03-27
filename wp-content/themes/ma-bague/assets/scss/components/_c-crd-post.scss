@@ -1,0 +1,36 @@
+/*----------------------------------------------------------------------------*\
+ * C CARD POST SCSS
+\*----------------------------------------------------------------------------*/
+
+.c-crd-post {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    height: 100%;
+
+    &_med {
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
+
+    &_txt {
+        display: flex;
+        flex-direction: column;
+        padding: var(--wbd-m);
+        flex: 1;
+    }
+
+    &_txt > *:nth-last-child(2) {
+        margin-bottom: auto;
+    }
+
+    &_ttl {
+        text-decoration: none !important;
+    }
+
+    &_terms {
+        text-transform: uppercase;
+    }
+    
+/*----------------------------------------------------------------------------*/
+}   

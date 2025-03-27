@@ -1,0 +1,88 @@
+/*----------------------------------------------------------------------------*\
+ * C ACCORDION ITEM SCSS
+ * A refactoriser, un peu brouillon
+\*----------------------------------------------------------------------------*/
+
+.c-acc {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wbd-s);
+
+    &_ttl { 
+        margin-right: auto;
+        transition: var(--wbd-transi);
+        font-size: var(--wbd-2);
+        font-weight: 600;
+    }
+
+    &_ico {
+        object-fit: contain; // si image
+        border-right: 1px solid;
+        width: var(--wbd-m-xl);
+        height: calc(var(--wbd-m-l) * 1.1);
+        padding-right: var(--wbd-s);
+    }
+
+    &_item {
+        border: 1px solid;
+        box-shadow: var(--wbd-3xs) var(--wbd-4xs) 0 0;
+    }
+
+    &_item:has(&_ico) &_panel {
+        border-left: 1px solid;
+        margin: 0 var(--wbd-s) 0 calc(var(--wbd-m-xl) + var(--wbd-s));
+        padding-left: var(--wbd-s);
+    }
+
+    &_item:hover &_ttl {
+        transform: translateX(.2em) translateZ(0);
+    }
+    
+    &_item[open] &_panel {
+        margin-bottom: var(--wbd-s);
+    }
+
+    &_panel {
+        padding-inline: var(--wbd-s);
+    }
+
+    &_button {
+        padding: var(--wbd-2xs) var(--wbd-s);
+        gap: var(--wbd-s);
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+
+// Invariants (en théorie)
+[wbd-acc-panel] {
+    overflow: hidden;
+    max-height: 0;
+}
+
+[wbd-acc-panel], [wbd-acc-cta]:after {
+    transition: var(--wbd-transi);
+}
+
+[wbd-acc-item][open] > [wbd-acc-cta]:after {
+    font-family: var(--wbd-f2);
+    transform: translateZ(0) rotate(180deg);
+    content: '—';
+}
+
+[wbd-acc-cta]{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+[wbd-acc-cta]:after {
+    margin-left: auto; // si pas de ttl
+    font-family: 'Deficons';
+    font-size: var(--wbd-2);
+    transform: translateZ(0) rotate(45deg);
+    text-shadow: .5px .5px;
+    font-weight: 600;
+    content: '\e931';
+}

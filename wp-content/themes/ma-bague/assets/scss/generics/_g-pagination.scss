@@ -1,0 +1,76 @@
+/*----------------------------------------------------------------------------*\
+ * PAGINATION SCSS (avec ou sans wp-pageNavi)
+ /*----------------------------------------------------------------------------*/
+
+ .pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--wbd-2xs);
+
+  :is( .page, .current,
+  .page-numbers ) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--wbd-transi);
+    &:after {transition: var(--wbd-transi);}
+    font-weight: 600;
+    opacity: .68;
+  }
+
+  :is( .prev, .next ) {
+    margin-inline: var(--wbd-2xs);
+  }
+
+  &.paginate .page-numbers:not(.prev,.next) {
+    padding: 0 var(--wbd-2xs);
+    border: 1px solid;
+  }
+  &.more .page-numbers {
+    padding: var(--wbd-2xs) var(--wbd-m);
+    text-transform: uppercase;
+    border-block: 1px solid;
+  }
+  &.infinite .page-numbers {
+    visibility: hidden;
+  }
+
+  :is(.page-numbers.current,
+    .pages-numbers:hover:not(.prev, .next) ) {
+    color: var(--wp--preset--color--thm-02);
+    border-color: var(--thmAcc);
+    background: var(--thmAcc);
+    opacity: 1;
+  }
+
+  &:after {
+    aspect-ratio: 1;
+    width: var(--wbd-l);
+    height: var(--wbd-xl);
+    --c: no-repeat linear-gradient(var(--thmTxt) 0 0);
+    background: 
+      var(--c) 0%   50%,
+      var(--c) 50%  50%,
+      var(--c) 100% 50%;
+    background-size: 20% 100%;
+    animation: l1 1s infinite linear;
+    @keyframes l1 {
+      0%  {background-size: 20% 100%,20% 100%,20% 100%}
+      33% {background-size: 20% 10% ,20% 100%,20% 100%}
+      50% {background-size: 20% 100%,20% 10% ,20% 100%}
+      66% {background-size: 20% 100%,20% 100%,20% 10% }
+      100%{background-size: 20% 100%,20% 100%,20% 100%}
+    }
+  }
+
+  &.more:after,
+  &.paginate:after {
+    position: absolute;
+    bottom: var(--wbd-5xl);
+    z-index: 1;
+  }
+
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

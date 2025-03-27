@@ -1,0 +1,18 @@
+{
+  "devUrl": "http://localhost:3000",
+  "paths": {
+    "root": "C:\\MAMP\\htdocs\\webidi\\wp-ingenius\\wp-content\\themes\\ma-bague",
+    "src": "C:\\MAMP\\htdocs\\webidi\\wp-ingenius\\wp-content\\themes\\ma-bague\\assets",
+    "dist": "C:\\MAMP\\htdocs\\webidi\\wp-ingenius\\wp-content\\themes\\ma-bague\\dist",
+    "js": "js",
+    "css": "css",
+    "fonts": "fonts",
+    "images": "images",
+    "svg": "svg"
+  },
+  "entries": {
+    "main": "js/main.js",
+    "unpoly": "js/_libs/unpoly.min.js",
+    "admin": "scss/admin.scss"
+  }
+}

@@ -20,16 +20,16 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp-ingenius' );
+define( 'DB_NAME', "wp-ingenius" );
 
 /** Database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', "root" );
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', "root" );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', "localhost" );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -91,6 +91,7 @@ define( 'WP_DEBUG', false );
 
 
 
+define( 'DUPLICATOR_AUTH_KEY', '5*jgvyD-d}?kd(eD53?U$e(2hKt28S6byQUFRaOtnqp*zC_5AGx{0a>{q*GL]LAt' );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */

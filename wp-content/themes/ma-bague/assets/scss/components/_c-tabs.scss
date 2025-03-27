@@ -1,0 +1,53 @@
+/*----------------------------------------------------------------------------*\
+ * C TABS SCSS
+\*----------------------------------------------------------------------------*/
+.c-tabs {
+
+    &_nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(var(--wbd-8xl), 1fr));
+    }
+
+    &_nav-btn {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: var(--wbd-xs);
+        font-size: var(--wbd-1);
+        transition: var(--wbd-transi);
+        transform: translateY(var(--wbd-3xs));
+        width: 100%;
+        opacity: .4;
+        &.active {
+            color: var(--thmBg);
+            background: var(--thmAcc);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    &_panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--wbd-gut-2);
+        padding: var(--wbd-m-l);
+        transition: var(--wbd-transi);
+        border: 1px solid var(--thmAcc);
+        box-shadow: 0 10px 20px -20px;
+    }
+
+    &_panel > * {
+        flex: 1 1 var(--wbd-col-3);
+    }
+
+    &.tabsv {
+        display: flex;
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+[wbd-tab-ref] { cursor: pointer; }
+[wbd-tab-id] { display: none; opacity: 0.005; transition: var(--wbd-transi); }
+[wbd-tab-id].active { display: table; opacity: 1; }

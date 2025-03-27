@@ -1,0 +1,35 @@
+/*----------------------------------------------------------------------------*\
+ * BANNER SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-ban {
+  overflow: hidden;
+
+  [class*='ctn'] {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: 0;
+  }
+
+  [class*='_col'] {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 var(--wbd-col-2);
+    margin-inline: var(--wbd-gut);
+    gap: var(--wbd-s);
+  }
+
+  [class*='o-bg'], [class*='_col']:after {
+    transform: unset;
+    width: calc(100% + var(--wbd-gut) * 2);
+    left: calc(var(--wbd-gut)* -1);
+  }
+
+  [class*='_ttl'] {
+    font-size: var(--wbd-7);
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

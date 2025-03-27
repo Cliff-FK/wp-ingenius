@@ -1,0 +1,22 @@
+/*----------------------------------------------------------------------------*\
+ * B FORM SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-frm {
+
+  [class*='o-ctn'] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wbd-gut-2);
+    max-width: var(--wbd-col-10);
+  }
+
+  [class*='o-ctn'] > .c-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end global CSS

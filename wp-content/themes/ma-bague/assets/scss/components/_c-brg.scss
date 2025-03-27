@@ -1,0 +1,45 @@
+/*----------------------------------------------------------------------------*\
+*  COMPONENT BURGER ICON
+\*----------------------------------------------------------------------------*/
+
+.c-brg {
+    display: flex;
+    outline: none;
+    cursor: pointer;
+    align-self: normal;
+    align-items: center;
+    justify-content: center;
+    background: var(--wp--preset--color--thm-4);
+    transition: var(--wbd-transi);
+    padding: var(--wbd-s);
+    gap: var(--wbd-s); // si string 'Menu' présente
+
+    &_wrp {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        box-sizing: content-box;
+        justify-content: space-between;
+        height: var(--wbd-1);
+        width: var(--wbd-2);
+    }
+
+    &_bar {
+        display: flex;
+        background: var(--wp--preset--color--thm-02);
+        transition: var(--wbd-transi);
+        transform: rotate(0deg);
+        border-radius: 1em;
+        height: 3px;
+        width: 100%;
+        &:last-child { width: 66%; }
+    }
+    
+    &.brg-open &_bar { position: absolute; }
+    &.brg-open &_wrp { justify-content: center; }
+    &.brg-open &_bar:first-child { transform: rotate(45deg); }
+    &.brg-open &_bar:nth-child(2) { transform: scale(0); }
+    &.brg-open &_bar:last-child { transform: rotate(-45deg); width: 100%; }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

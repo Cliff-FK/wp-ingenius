@@ -1,0 +1,20 @@
+/*----------------------------------------------------------------------------*\
+ * U HOVERLINE
+\*----------------------------------------------------------------------------*/
+:is(.u-lined, .menu-item >a) {
+	background: 
+		linear-gradient(to right, transparent, transparent),
+		linear-gradient(to right, var(--thmAcc), var(--thmAcc) );
+	background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+	transition: var(--wbd-transi);
+  background-repeat: no-repeat;
+}
+
+:is(.u-lined, .menu-item >a):hover,
+:is(.u-lined, .menu-item >a):focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
+/*----------------------------------------------------------------------------*/
+// end CSS

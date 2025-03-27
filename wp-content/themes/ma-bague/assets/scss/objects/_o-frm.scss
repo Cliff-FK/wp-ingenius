@@ -1,0 +1,309 @@
+/*----------------------------------------------------------------------------*\
+ * O FORMULAIRE
+\*----------------------------------------------------------------------------*/
+
+.o-frm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--wbd-gut-1) var(--wbd-gut-2);
+
+  [class*='c-hdr'] {
+    align-items: center;
+  }
+
+  [class*='_col'] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wbd-xs) var(--wbd-s);
+    flex: 1 1 var(--wbd-col-3);
+    // height: 100%;
+  }
+  
+  :is(textarea, select, .nice-select, [flt-type="box"] label, input:not([type="checkbox"],[type="radio"])):focus,
+  :is(textarea, select, .nice-select, [flt-type="box"] label, input:not([type="checkbox"],[type="radio"])).active {
+    background: rgba(var(--wp--preset--color--thm-4--rgb), .1); box-shadow: none;
+  }
+  :is(textarea, select, .nice-select, [flt-type="box"] label, input:not([type="checkbox"],[type="radio"])) {
+    color: inherit; // admin
+    line-height: inherit; // admin
+    background: transparent;
+    border: 1px solid;
+    padding: var(--wbd-xs) var(--wbd-s) var(--wbd-2xs) var(--wbd-s-m);
+    transition: var(--wbd-transi);
+    border-radius: var(--wbd-xs);
+    font-weight: 300; 
+  }
+
+  textarea  {
+    resize: none;
+    box-sizing: border-box;
+    border-width: 1px 1px 1px 1px;
+    max-height: 140px;
+    width: 100%;
+  }
+
+  :is([type="radio"],[type="checkbox"]),
+  :is([type="radio"],[type="checkbox"]):before {
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 1px;
+    height: var(--wbd-s);
+    width: var(--wbd-s);
+    border-radius: 2px; // admin
+    margin: 0; // admin
+    left: 0; // admin
+  }
+
+  :is([type="radio"],[type="checkbox"]):before {
+    position: absolute;
+    transition: var(--wbd-transi);
+    transform: scale(0);
+    content: '';
+  }
+
+  :is([type="radio"],[type="checkbox"]):checked:before {
+    box-shadow: inset 0 0 0 2em;
+    transform: scale(.55);
+  }
+
+  :where(.nice-select,
+  [flt-type="box"] label,
+  input, textarea, select) {
+    outline: none;
+    appearance: none;
+    position: relative;
+    -webkit-appearance: none; // mobil fix  
+    font-family: var(--wbd-f2);
+    font-weight: 300;
+    width: 100%;
+  }
+
+  :is(.nice-select,
+  [flt-type="search"]):after {
+    position: absolute;
+    pointer-events: none;
+    font-family: 'Deficons';
+    transform: translateY(-50%);
+    transition: var(--wbd-transi);
+    right: var(--wbd-s);
+    font-size: 1.3em;
+    top: 50%;
+  }
+
+  :is(.nice-select,
+  input[type="search"]) {
+    padding-right: var(--wbd-6);
+    text-overflow: ellipsis;
+  }
+
+  :is(select [value=''],
+  .nice-select [data-value=''] ) {
+    display: none;
+  }
+
+  .nice-select:after {
+    content: '\e933';
+    transform: rotate(90deg);
+    line-height: 0;
+  }
+
+  [filter-type*="search"]:after {
+    content: '\e90c';
+  }
+
+  [class*='cta'] input {
+    display: none;
+  }
+
+  [class*='_item'] {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    font-size: var(--wbd-0);
+    font-weight: 300;
+  }
+  [role='alerte'] {
+    position: absolute;
+    pointer-events: none;
+    font-size: var(--wbd--2);
+    transition: var(--wbd-transi);
+    color: var(--wp--preset--color--thm-02);
+    background: var(--thmError);
+    border: 2px solid var(--thmBg);
+    padding: 2px var(--wbd-3xs);
+    border-width: 0 1px 1px 1px;
+    margin-left: -.5em;
+    top: 85%;
+    z-index: 2;
+    opacity: 0;
+    left: 0;
+  }
+
+  [class*='_item'] label:not([class*='_check'], [class*='cta']) {
+    pointer-events: none;
+    padding-left: var(--wbd-2xs);
+    margin-bottom: var(--wbd-3xs);
+    z-index: 1;
+  }
+
+  [class*='_item']:has([name="typologies[]"], [name="projet"]) label {
+    flex: 1;
+  }
+
+  [data-sync-lot-wrp] {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    align-items: center;
+    gap: var(--wbd-s);
+    width: 100%;
+  }
+  [data-sync-lot-wrp]>* {
+    flex: 0 1 var(--wbd-xl);
+  }
+
+  [class*="_item"]:has([data-sync-lot-wrp]:empty) {
+    display: none;
+  }
+
+  [class*='_item']:has([name="budget"]) {
+    input {
+      padding-right: var(--wbd-2xl);
+    }
+    &:before {
+      content: "€";
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 var(--wbd-xs) var(--wbd-xs) 0;
+      box-shadow: -11px 0 0 -10px color-mix(in srgb, var(--thmTxt), var(--thmBg) 60%);
+      width: var(--wbd-xl);
+      font-size: 1.2em;
+      height: 100%;
+      right: 0;
+    }
+  }
+
+
+  [class*='_item']:has([name="optin_email"]) {
+    flex-direction: column;
+  }
+
+  [class*='_check-wrp'] {
+    >:is(small,p) { width: var(--wbd-2xl); }
+    gap: var(--wbd-2xs);
+    display: flex;
+  }
+
+  &.o-float-lab [class*='_item']:not(:has([type*='check'],[type*='radio'])) {
+    &:has(select) label {
+      display: none;
+    }
+    label {
+      position: absolute;
+      transform: translateY(-50%);
+      transition: var(--wbd-transi);
+      padding-left: var(--wbd-s-m);
+      margin-bottom: calc(var(--wbd-s) * -1);
+      top: calc(var(--wbd-m) * .9);
+      left: 0;
+    }
+    &.js-focus label {
+      top: var(--wbd-xs);
+      font-size: 0.65em;
+      opacity: .5;
+    }
+  }
+  
+  [class*='_item']:has([type='submit']) {
+    --ctaTxt: var(--thmBg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--wbd-3xs);
+    :is(p,span,small) {
+      font-size: .7em;
+      opacity: .8;
+    }
+  }
+
+  :is([class*='_check-label']) {
+    gap: var(--wbd-2xs);
+    margin-inline: unset; // reset si on met .btn sur le label
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+  }
+
+  [class*='_item']:has([type="radio"], [type="checkbox"]) {
+    gap: var(--wbd-xs) var(--wbd-s);
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  &:not(:has(input[value="appel"]:checked)) [class*='_item']:has([name*="creneau_rappel"]) {
+    display: none;
+  }
+
+  .c-frm_policy {
+    margin-top: var(--wbd-2xs);
+    font-size: .7em;
+    opacity: .5;
+  }
+
+  // invalid ico structure
+  [class*="_item"]:has(:is(input,textarea, select)):after {
+    content: '!';
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    color: var(--wp--preset--color--thm-02);
+    transition: var(--wbd-transi);
+    background: var(--thmError);
+    border-radius: var(--wbd-m);
+    height: var(--wbd-m);
+    width: var(--wbd-m);
+    z-index: 1;
+    opacity: 0;
+    top: 50%;
+    right: 0;
+  }
+
+  &.o-valided:invalid :is([class*="_item"]:has(:is(input,textarea, select):invalid) ) {
+    &:after { opacity: 1; }
+    &:hover [role='alerte'] {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
+
+// Hook for JS wbd_isFocusedClass(), when autofill is shown. JavaScript can capture 'animationstart' events
+// https://medium.com/@brunn/detecting-autofilled-fields-in-javascript-aed598d25da7
+@keyframes onAutoFillStart {  from {/**/}  to {/**/}}
+@keyframes onAutoFillCancel {  from {/**/}  to {/**/}}
+input:-webkit-autofill { animation-name: onAutoFillStart; animation-duration: 10ms; }
+input:not(:-webkit-autofill) { animation-name: onAutoFillCancel; animation-duration: 10ms; }
+
+// Fix suppression des boutons d'incrémentation Webkit
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+// Fix suppression des boutons d'incrémentation Firefox
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+//----------------------------------------------------------------------------//
+} // end CSS

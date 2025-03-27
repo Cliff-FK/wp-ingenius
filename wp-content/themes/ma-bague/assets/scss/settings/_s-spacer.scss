@@ -1,0 +1,67 @@
+/*----------------------------------------------------------------------------*\
+ * SPACER VARIABLES
+ * https://utopia.fyi
+ * https://modern-fluid-typography.vercel.app
+ \*----------------------------------------------------------------------------*/
+/* @link https://utopia.fyi/space/calculator?c=512,16,1.125,1360,18,1.2,10,6,&s=0.75|0.5|0.25|0.15,1.5|2|3|4|5.5|7|9|11|13|15|17|20|22|25,m-xl|m-2xl|m-3xl|m-4xl|l-2xl|l-3xl|l-4xl|m-5xl|l-5xl|xl-3xl|xl-4xl|xl-5xl&g=2xs,xl,2xl,12 */
+
+
+body {
+  --wbd-4xs: clamp(0.125rem, 0.0873rem + 0.1179cqi, 0.1875rem);
+  --wbd-3xs: clamp(0.25rem, 0.2123rem + 0.1179cqi, 0.3125rem);
+  --wbd-2xs: clamp(0.5rem, 0.4623rem + 0.1179cqi, 0.5625rem);
+  --wbd-xs: clamp(0.75rem, 0.6745rem + 0.2358cqi, 0.875rem);
+  --wbd-s: clamp(1rem, 0.9245rem + 0.2358cqi, 1.125rem);
+  --wbd-m: clamp(1.5rem, 1.3868rem + 0.3538cqi, 1.6875rem);
+  --wbd-l: clamp(2rem, 1.8491rem + 0.4717cqi, 2.25rem);
+  --wbd-xl: clamp(3rem, 2.7736rem + 0.7075cqi, 3.375rem);
+  --wbd-2xl: clamp(4rem, 3.6981rem + 0.9434cqi, 4.5rem);
+  --wbd-3xl: clamp(5.5rem, 5.0849rem + 1.2972cqi, 6.1875rem);
+  --wbd-4xl: clamp(7rem, 6.4717rem + 1.6509cqi, 7.875rem);
+  --wbd-5xl: clamp(9rem, 8.3208rem + 2.1226cqi, 10.125rem);
+  --wbd-6xl: clamp(11rem, 10.1698rem + 2.5943cqi, 12.375rem);
+  --wbd-7xl: clamp(13rem, 12.0189rem + 3.066cqi, 14.625rem);
+  --wbd-8xl: clamp(15rem, 13.8679rem + 3.5377cqi, 16.875rem);
+  --wbd-9xl: clamp(17rem, 15.717rem + 4.0094cqi, 19.125rem);
+  --wbd-10xl: clamp(20rem, 18.4906rem + 4.717cqi, 22.5rem);
+  --wbd-11xl: clamp(22rem, 20.3396rem + 5.1887cqi, 24.75rem);
+  --wbd-12xl: clamp(25rem, 23.1132rem + 5.8962cqi, 28.125rem);
+
+  /* One-up pairs */
+  --wbd-4xs-3xs: clamp(0.125rem, 0.0118rem + 0.3538cqi, 0.3125rem);
+  --wbd-3xs-2xs: clamp(0.25rem, 0.0613rem + 0.5896cqi, 0.5625rem);
+  --wbd-2xs-xs: clamp(0.5rem, 0.2736rem + 0.7075cqi, 0.875rem);
+  --wbd-xs-s: clamp(0.75rem, 0.5236rem + 0.7075cqi, 1.125rem);
+  --wbd-s-m: clamp(1rem, 0.5849rem + 1.2972cqi, 1.6875rem);
+  --wbd-m-l: clamp(1.5rem, 1.0472rem + 1.4151cqi, 2.25rem);
+  --wbd-l-xl: clamp(2rem, 1.1698rem + 2.5943cqi, 3.375rem);
+  --wbd-xl-2xl: clamp(3rem, 2.0943rem + 2.8302cqi, 4.5rem);
+  --wbd-2xl-3xl: clamp(4rem, 2.6792rem + 4.1274cqi, 6.1875rem);
+  --wbd-3xl-4xl: clamp(5.5rem, 4.066rem + 4.4811cqi, 7.875rem);
+  --wbd-4xl-5xl: clamp(7rem, 5.1132rem + 5.8962cqi, 10.125rem);
+  --wbd-5xl-6xl: clamp(9rem, 6.9623rem + 6.3679cqi, 12.375rem);
+  --wbd-6xl-7xl: clamp(11rem, 8.8113rem + 6.8396cqi, 14.625rem);
+  --wbd-7xl-8xl: clamp(13rem, 10.6604rem + 7.3113cqi, 16.875rem);
+  --wbd-8xl-9xl: clamp(15rem, 12.5094rem + 7.783cqi, 19.125rem);
+  --wbd-9xl-10xl: clamp(17rem, 13.6792rem + 10.3774cqi, 22.5rem);
+  --wbd-10xl-11xl: clamp(20rem, 17.1321rem + 8.9623cqi, 24.75rem);
+  --wbd-11xl-12xl: clamp(22rem, 18.3019rem + 11.5566cqi, 28.125rem);
+
+  /* Custom pairs */
+  --wbd-m-xl: clamp(1.5rem, 0.3679rem + 3.5377cqi, 3.375rem);
+  --wbd-m-2xl: clamp(1.5rem, -0.3113rem + 5.6604cqi, 4.5rem);
+  --wbd-m-3xl: clamp(1.5rem, -1.3302rem + 8.8443cqi, 6.1875rem);
+  --wbd-m-4xl: clamp(1.5rem, -2.3491rem + 12.0283cqi, 7.875rem);
+  --wbd-m-5xl: clamp(1.5rem, -3.7075rem + 16.2736cqi, 10.125rem);
+  --wbd-l-2xl: clamp(2rem, 0.4906rem + 4.717cqi, 4.5rem);
+  --wbd-l-3xl: clamp(2rem, -0.5283rem + 7.9009cqi, 6.1875rem);
+  --wbd-l-4xl: clamp(2rem, -1.5472rem + 11.0849cqi, 7.875rem);
+  --wbd-l-5xl: clamp(2rem, -2.9057rem + 15.3302cqi, 10.125rem);
+  --wbd-xl-3xl: clamp(3rem, 1.0755rem + 6.0142cqi, 6.1875rem);
+  --wbd-xl-4xl: clamp(3rem, 0.0566rem + 9.1981cqi, 7.875rem);
+  --wbd-xl-5xl: clamp(3rem, -1.3019rem + 13.4434cqi, 10.125rem);
+}
+
+
+/*----------------------------------------------------------------------------*/
+// end CSS

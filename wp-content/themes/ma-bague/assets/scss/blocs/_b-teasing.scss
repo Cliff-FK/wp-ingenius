@@ -1,0 +1,233 @@
+/*----------------------------------------------------------------------------*\
+ * B TEASING SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-teasing {
+  overflow: hidden;
+
+  [class*='ctn'] {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline: initial;
+    max-width: initial;
+    min-height: 80vh;
+  }
+
+  &_pat {
+    width: auto;
+    position: absolute;
+    mix-blend-mode: multiply;
+    transform: translate(-35%, -60%);
+    max-height: 60vh;
+    left: 100%;
+    top: 50%;
+    z-index:-6;
+  }
+
+  &_ban {
+    text-align: center;
+    text-transform: uppercase;
+    padding: var(--wbd-3xs);
+    :is(h1,h2,h3) { font-size: var(--wbd--2) !important; }
+  }
+
+  &_meds {
+    position: relative;
+    min-height: var(--wbd-col-2);
+  }
+
+  &_med {
+    object-fit: cover;
+    transition: opacity 1s linear, transform 12s linear;
+    transform-origin: bottom right;
+    transform: scale(1.05);
+    opacity: 0; z-index:-2;
+    &[class*='active'] {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &_wrp {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 2 var(--wbd-col-3);
+  }
+
+  &_wrp &_hdr {
+    text-align: center;
+  }
+
+  &_wrp &_ttl {
+    text-transform: capitalize;
+    font-family: var(--wbd-f1);
+    font-size: var(--wbd-2xl);
+    color: color-mix(in srgb, var(--thmAcc) 75%, var(--wp--preset--color--thm-02));
+    font-weight: 400 ;
+    line-height: .6;
+  }
+
+  &_wrp &_subttl {
+    font-size: var(--wbd-3);
+  }
+
+  &_wrp &_desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--wbd-1);
+    gap: var(--wbd-xs);
+    &:before {
+      content: "\e927";
+      font-family: 'Deficons';
+      color: color-mix(in srgb, var(--thmAcc) 75%, var(--wp--preset--color--thm-02));
+      font-size: 2em;
+    }
+  }
+
+  &_ofr {
+    margin-top: auto;
+    padding: var(--wbd-xs) var(--wbd-s);
+    &:hover &-more:before { width: 100%; }
+  }
+
+  &_ofr-btn {
+    text-transform: uppercase;
+    gap: var(--wbd-s);
+  }
+  &_ofr-ttl {
+    font-size: var(--wbd-1);
+  }
+  &_ofr-panel {
+    font-size: var(--wbd--1);
+    opacity: .6;
+  }
+  &_ofr-more {
+    transition: var(--wbd-transi);
+    opacity: .6;
+  }
+  &_ofr-ml {
+    text-decoration: underline;
+  }
+  [open] &_ofr-more {
+    opacity: 0;
+  }
+
+  &_hdr {
+    padding: var(--wbd-l) var(--wbd-gut-0);
+  }
+
+  &_disps {
+    --ctaTxt: var(--thmBg);
+    display: flex;
+    justify-content: center;
+    margin-top: var(--wbd-s);
+    gap: var(--wbd-2xs);
+  }
+
+  &_frm {
+    z-index:6;
+    display: flex;
+    padding: var(--wbd-l-xl) var(--wbd-gut-2);
+  }
+
+  :is([class$='_frm'] [class*='subttl'], [class$='_date'] ) {
+    width: fit-content;
+    margin-inline: auto ;
+    text-transform: uppercase;
+    background: var(--thmAcc);
+    margin-top: var(--wbd-xs);
+    margin-bottom: var(--wbd-s);
+    font-size: var(--wbd--2) !important;
+    padding: var(--wbd-2xs) var(--wbd-m);
+    font-weight: 400 !important;
+    order: -1;
+  }
+
+  &_frm :is(small,[class*='desc']) {
+    opacity: .6 !important;
+  }
+  &_frm [class*='_item']:has([name="optin"]) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &_atouts {
+    padding: var(--wbd-m) var(--wbd-gut-2);
+  }
+
+  &_atouts-wrp {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--wbd-s);
+  }
+
+  &_atout {
+    font-weight: 500;
+    >* { font-size: var(--wbd--1) !important; }
+    &:first-of-type { padding-left: 0; &:before { display: none; } }
+  }
+
+  &_atout-ttl {
+    text-transform: uppercase;
+    font-weight: bold !important;
+    font-size: calc(var(--wbd-2) * .9) !important;
+  }
+
+  &_atout-med {
+    width: auto;
+    max-height: var(--wbd-5);
+  }
+
+  :is([class$='_frm'] [type="submit"], [class$='_disps'] ) {
+    --ctaBg: var(--thmTxt);
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+
+body.lg .b-teasing {
+  &_meds {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-7;
+    right: 0;
+    top: 0;
+  }
+  &_ofr {
+    margin-left: var(--wbd-gut-2);
+    max-width: var(--wbd-col-4);
+  }
+  &_hdr {
+    margin-bottom: var(--wbd-m-l);
+    max-width: var(--wbd-col-4);
+    &:after {opacity: .7;}
+  }
+  &_atouts {
+    margin-left: var(--wbd-gut-3);
+    margin-right: var(--wbd-gut-3);
+    flex-direction: row;
+  }
+  &_atouts-wrp {
+    flex-direction: row;
+  }
+  &_atout {
+    &:first-of-type { flex: 1 1 var(--wbd-col-1); }
+    flex: 1 1 var(--wbd-col-1);
+  }
+  &_frm {
+    max-width: var(--wbd-col-4);
+    flex: 2 1 var(--wbd-col-2);
+    max-height: 100vh;
+  }
+  &_frm > * {
+    overflow: auto;
+    scrollbar-width: none;
+    padding-bottom: var(--wbd-gut-m); 
+  }
+}

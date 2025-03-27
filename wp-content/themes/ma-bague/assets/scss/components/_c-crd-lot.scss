@@ -1,0 +1,90 @@
+/*----------------------------------------------------------------------------*\
+ * C CARD LOT SCSS
+\*----------------------------------------------------------------------------*/
+
+.c-crd-lot {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wbd-2xs);
+    font-weight: 600;
+
+    &_swiper {
+        height: 100%;
+    }
+    
+    &_txt {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--wbd-3xs) var(--wbd-2xs);
+    }
+
+    &_gall {
+        overflow: hidden;
+        position: relative;
+        border-radius: var(--wbd-xs);
+        height: 100%;
+    }
+
+    &_med {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &_nbRoom {
+        white-space: nowrap;
+        margin-right: auto;
+        font-size: var(--wbd-2);
+        font-weight: 700;
+        flex: 100%;
+    }
+
+    &:has(&_price) &_nbRoom {
+        flex: 20%;
+    }
+    
+    &_price {
+        text-align: right;
+        white-space: nowrap;
+        flex: calc(70% - var(--wbd-xs));
+        font-size: var(--wbd-3);
+        color: var(--thmAcc);
+    }
+
+    &_nbBed, &_floor, &_srfc, &_anex {
+        font-size: var(--wbd-0);
+    }
+
+    &_desc {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-weight: 400;
+        width: 100%;
+        opacity: .6;
+    }
+
+    [class*='cta'] {
+        margin-top: var(--wbd-s);
+        align-self: flex-end;
+    }
+
+    & &-cta-3D {
+        flex: 4 1 var(--wbd-col-1);
+        &:after {
+            content: "\e91f" !important;
+            background: var(--ctaTxt) !important;
+            color: var(--ctaBg) !important;
+            font-size: 1em !important;
+            font-family: 'Deficons';
+        }
+    }
+
+    &-cta-mdl {
+        flex: 3 1 var(--wbd-m);
+    }
+    
+
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

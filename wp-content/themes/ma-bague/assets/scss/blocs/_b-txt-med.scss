@@ -1,0 +1,54 @@
+/*----------------------------------------------------------------------------*\
+ * TXT MED MD SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-txt-med {
+
+  [class*='ctn'] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wbd-gut-2) var(--wbd-gut-3);
+  }
+
+  :is(.c-hdr, .c-hdr>*, [class$='_cta']) {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .c-hdr {
+    flex: 1 1 var(--wbd-col-12);
+  }
+
+  .c-wisy {
+    flex: 1 1 var(--wbd-col-3);
+  }
+
+  .swiper, &:not(:has(.swiper)) .c-med {
+    flex: 1 1 var(--wbd-col-4);
+  }
+
+  .swiper-navigation {
+    position: absolute;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    width: 100%;
+    top: 50%;
+    z-index:1;
+  }
+
+  &.tpl2 {
+    :is([class*='o-ctn'], [class*='o-ctn'] > *) {
+      transform: scaleX(-1);
+    }
+  }
+
+  // quickfix wtf admin
+  &:not(:has(.swiper)) .c-med {
+    width: 0;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+

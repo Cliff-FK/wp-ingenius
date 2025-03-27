@@ -1,0 +1,58 @@
+/*----------------------------------------------------------------------------*\
+ * C CARD PROG SCSS
+\*----------------------------------------------------------------------------*/
+
+.c-crd-prog {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wbd-s-m);
+    * { transition: var(--wbd-transi); }
+    
+    &_ttl {
+        font-weight: 500 !important;
+        font-size: var(--wbd-1) !important;
+    }
+
+    &_figure {
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        :is(img,svg,video) {
+            transform-origin: top left;
+        }
+    }
+
+    
+    &_ttl, &_desc {
+        background: var(--thmBg);
+        padding-inline: var(--wbd-s-m);
+        z-index: 1;
+    }
+
+    &_ttl {
+        padding-block: var(--wbd-xs);
+        font-size: var(--wbd-0) !important;
+        font-weight: 600 !important;
+    }
+    
+    &_desc {
+        max-height: 0;
+    }
+    &_desc span {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+    }
+
+    &:hover &_figure :is(img,svg,video) {
+        transform: scale(1.1);
+    }
+    &:hover &_desc {
+        max-height: 180px;
+        padding-bottom: var(--wbd-s-m);
+    }
+
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

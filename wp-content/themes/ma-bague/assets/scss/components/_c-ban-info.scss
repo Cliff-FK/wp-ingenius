@@ -1,0 +1,31 @@
+/*----------------------------------------------------------------------------*\
+ * GENERAL BANNER INFO
+\*----------------------------------------------------------------------------*/
+
+.c-ban-info {
+    position: relative;
+    border-bottom: 1px solid var(--wp--preset--color--thm-01);
+    padding: var(--wbd-2xs) 0;
+    z-index: 2;
+
+    &_wrp {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: var(--wbd-2xs-xs);
+        >* { flex: 1; }
+    }
+
+    &_txt {
+        font-size: var(--wbd--2);
+        max-width: 999px;
+    }
+
+    [class*='-cta'] {
+        white-space: nowrap;
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

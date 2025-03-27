@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------------------*\
+ * C SOCIALS
+\*----------------------------------------------------------------------------*/
+
+.c-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--wbd-2xs);
+
+  &_el a {
+    display: flex;
+    overflow: hidden;
+    box-sizing: content-box;
+    border-radius: var(--wbd-xl);
+    transition: var(--wbd-transi);
+    padding: var(--wbd--4);
+    width: var(--wbd-xs);
+    &:hover { filter: brightness(1.4); }
+  }
+
+  &_el a >* {
+    height: auto;
+    display: flex;
+  }
+
+/* -------------------------------------------------------------------------- */
+} // end CSS

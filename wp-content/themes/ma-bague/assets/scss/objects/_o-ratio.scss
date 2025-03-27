@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------*\
+  *  ELEMENT DIMENSIONNÉ SELON UN RATIO
+  * u-13x8: approximation du nombre d'or
+\*----------------------------------------------------------------------------*/
+[class*="u-4x3"] { aspect-ratio: 4/3; }
+[class*="u-3x4"] { aspect-ratio: 3/4; }
+[class*="u-21x9"]{ aspect-ratio: 21/9; }
+[class*="u-10x3"]{ aspect-ratio: 10/3; }
+[class*="u-13x8"]{ aspect-ratio: 13/8; }
+[class*="u-16x9"]{ aspect-ratio: 16/9; }
+[class*="u-1x2"] { aspect-ratio: 1/2; }
+[class*="u-1x1"] { aspect-ratio: 1/1; }
+
+:is([class*="u-1"], [class*="u-2"] ,[class*="u-3"], [class*="u-4"]) {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+:is([class*="u-1"], [class*="u-2"] ,[class*="u-3"], [class*="u-4"])
+  :is(img, video, iframe, embed, lottie-player ) {
+      object-position: center;
+      position: absolute;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+// end CSS

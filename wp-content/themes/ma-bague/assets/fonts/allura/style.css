@@ -1,0 +1,9 @@
+/* Pense-Bête */
+
+@font-face {
+    font-family: 'Allura';
+    src: url('../../fonts/allura/subset-Allura-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

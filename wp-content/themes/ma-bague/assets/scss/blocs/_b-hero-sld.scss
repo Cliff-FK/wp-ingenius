@@ -1,0 +1,38 @@
+/*----------------------------------------------------------------------------*\
+ * HERO SLIDER SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-hero-sld {
+
+  &_slide {
+    display: flex;
+    height: auto; //quick fix swiper
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--wbd-gut-2) var(--wbd-gut-4);
+    padding-block: var(--wbd-gut-1) var(--wbd-2xl-3xl);
+    >* { flex: 1 1 var(--wbd-col-4); }
+    &.tpl1 { flex-direction: row-reverse; }
+  }
+
+  [class='c-hdr'] {
+    text-align: center;
+    margin-inline: auto;
+    flex: 0 1 var(--wbd-col-5); 
+  }
+
+  [class*='_ttl'] {
+    font-size: var(--wbd-9);
+    line-height: .9;
+  }
+
+  [class*='_subttl'] {
+    font-size: var(--wbd-6);
+  }
+
+  *:not(.o-bg) > :is(video,iframe){
+    max-height: var(--wbd-col-3); // quickfix
+  }
+  
+/*----------------------------------------------------------------------------*/
+} // end CSS

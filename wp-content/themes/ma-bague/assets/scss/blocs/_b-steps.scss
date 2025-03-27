@@ -1,0 +1,91 @@
+/*----------------------------------------------------------------------------*\
+ * B STEPS SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-steps {
+  --lineSize: var(--wbd-4xs);
+
+  [class*='o-ctn'] {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--wbd-s-m);
+    padding-inline: 0; // quickfix design mobile un peu mieux
+  }
+
+  hr {
+    flex: 1;
+    border: none;
+    position: relative;
+    &:last-child { display: none; }
+    box-shadow: inset 0 0 var(--wbd-9);
+    height: 3px;
+  }
+
+  &_items {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    justify-content: center;
+    &:not(:hover)::-webkit-scrollbar,
+    &:not(:hover)::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition-delay: calc(var(--delay) * 90);
+    font-size: var(--wbd-1);
+    color: var(--thmAcc);
+  }
+
+  &_item:before {
+    content: '';
+    display: flex;
+    background: var(--thmAcc);
+    transform: translateY(calc(var(--wbd-4) / -2 - var(--lineSize)));
+    height: var(--lineSize);
+    width: 100%;
+  }
+
+  &_item:after {
+    content: '\e906';
+    font-family: 'Deficons';
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: var(--lineSize) solid;
+    box-shadow: 0 0 0 var(--lineSize) var(--thmBg);
+    transition: var(--wbd-transi);
+    border-radius: var(--wbd-m);
+    background: var(--thmBg);
+    font-size: var(--wbd-3);
+    height: var(--wbd-4);
+    width: var(--wbd-4);
+    z-index: 1;
+    order: -1;
+  }
+
+  &_ttl {
+    font-weight: bold;
+    text-align: center;
+    padding-inline: var(--wbd-s-m);
+    max-width: var(--wbd-col-2);
+    min-width: var(--wbd-col-1);
+    line-height: 1.2;
+  }
+
+  &_item.stat3 &_ttl { font-weight: 400; }
+  
+  &_item.stat3 { color: color-mix(in srgb, var(--thmBg), var(--wp--preset--color--thm-06) 60%); }
+  &_item.stat3:before { background: color-mix(in srgb, var(--thmBg), var(--wp--preset--color--thm-06) 30%); }
+  &_item.stat3:after { background: color-mix(in srgb, var(--thmBg), var(--wp--preset--color--thm-06) 30%); content: ''; transform: scale(0.6); border-color: transparent; }
+
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+

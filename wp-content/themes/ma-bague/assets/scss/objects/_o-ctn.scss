@@ -1,0 +1,78 @@
+/*----------------------------------------------------------------------------*\
+ * GRID VARIABLES BOOTRAAP TEMPORAIRE
+ * https://utopia.fyi/
+ * @link https://utopia.fyi/grid/calculator?c=512,25,1.125,1980,29,1.225,10,4,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=2xs,xl,2xl,12
+ * https://www.leptidigital.fr/technologie/parts-marche-resolutions-ecrans-26797/
+/*----------------------------------------------------------------------------*/
+
+:root {
+    --wbd-ctn: 1450px;
+    --wbd-ctn-xs: calc(var(--wbd-ctn) / 12 * (12 - 5.00));
+    --wbd-ctn-sm: calc(var(--wbd-ctn) / 12 * (12 - 2.00));
+    --wbd-ctn-lg: calc(var(--wbd-ctn) / 12 * (12 + 1.00));
+    --wbd-ctn-xl: calc(var(--wbd-ctn) / 12 * (12 + 2.00));
+    
+    --wbd-gut-0: 0;
+    --wbd-gut-1: clamp(1cqi, 6cqi, 2cqi);
+    --wbd-gut-2: clamp(1cqi, 6cqi, 3cqi);
+    --wbd-gut-3: clamp(1cqi, 6cqi, 5cqi);
+    --wbd-gut-4: clamp(1cqi, 6cqi, 8cqi);
+    --wbd-gut-5: clamp(1cqi, 6cqi, 10cqi);
+  }
+
+  [class*='o-ctn'] {
+    --wbd-gut: var(--wbd-gut-4); 
+
+    --wbd-col-1: calc( var(--wbd-ctn) / 12 * 1 );
+    --wbd-col-2: calc( var(--wbd-ctn) / 12 * 2 );
+    --wbd-col-3: calc( var(--wbd-ctn) / 12 * 3 );
+    --wbd-col-4: calc( var(--wbd-ctn) / 12 * 4 );
+    --wbd-col-5: calc( var(--wbd-ctn) / 12 * 5 );
+    --wbd-col-6: calc( var(--wbd-ctn) / 12 * 6 );
+    --wbd-col-7: calc( var(--wbd-ctn) / 12 * 7 );
+    --wbd-col-8: calc( var(--wbd-ctn) / 12 * 8 );
+    --wbd-col-9: calc( var(--wbd-ctn) / 12 * 9 );
+    --wbd-col-10:calc( var(--wbd-ctn) / 12 * 10 );
+    --wbd-col-11:calc( var(--wbd-ctn) / 12 * 11 );
+    --wbd-col-12:calc( var(--wbd-ctn) / 12 * 12 ); 
+    
+    margin-inline: auto;
+    padding-inline: var(--wbd-gut);
+    max-width: clamp(320px, 100vw, calc(var(--wbd-ctn) + var(--wbd-gut) * 2));
+  }
+
+  [class*='o-ctn-xs'] {
+    --wbd-ctn: var(--wbd-ctn-xs);
+  }
+
+  [class*='o-ctn-sm'] {
+    --wbd-ctn: var(--wbd-ctn-sm);
+  }
+
+  [class*='o-ctn-lg'] {
+    --wbd-ctn: var(--wbd-ctn-lg);
+    --wbd-gut: var(--wbd-gut-3);
+  }
+
+  [class*='o-ctn-xl'] {
+    --wbd-ctn: var(--wbd-ctn-xl); 
+    --wbd-gut: var(--wbd-gut-2);
+  }
+  
+/*----------------------------------------------------------------------------*/
+// end CSS
+
+  // temporaire, écrasement des class gutter Bootstrap
+  .row { --bs-gutter-x: var(--wbd-gut); }
+  .g-0, .gx-0 { --bs-gutter-x: var(--wbd-gut-0); }
+  .g-0, .gy-0 { --bs-gutter-y: var(--wbd-gut-0); }
+  .g-1, .gx-1 { --bs-gutter-x: var(--wbd-gut-1); }
+  .g-1, .gy-1 { --bs-gutter-y: var(--wbd-gut-1); }
+  .g-2, .gx-2 { --bs-gutter-x: var(--wbd-gut-2); }
+  .g-2, .gy-2 { --bs-gutter-y: var(--wbd-gut-2); }
+  .g-3, .gx-3 { --bs-gutter-x: var(--wbd-gut-3); }
+  .g-3, .gy-3 { --bs-gutter-y: var(--wbd-gut-3); }
+  .g-4, .gx-4 { --bs-gutter-x: var(--wbd-gut-4); }
+  .g-4, .gy-4 { --bs-gutter-y: var(--wbd-gut-4); }
+  .g-5, .gx-5 { --bs-gutter-x: var(--wbd-gut-5); }
+  .g-5, .gy-5 { --bs-gutter-y: var(--wbd-gut-5); }

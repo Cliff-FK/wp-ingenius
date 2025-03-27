@@ -1,0 +1,90 @@
+/*----------------------------------------------------------------------------*\
+ * G BASES
+\*----------------------------------------------------------------------------*/
+body {
+  font-family: var(--wbd-f1);
+  font-size: var(--wbd-0);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+:is(h1,h2,h3,h4,h5,h6, [class*='u-h']) {
+  font-family: var(--wbd-f2);
+  line-height: calc(1em + 4px);
+  font-weight: 400;
+  margin: unset;
+}
+
+:is(small, *.u-small) { font-size: var(--wbd--2); }
+:is(h1, *.u-h1) { font-size: var(--wbd-8); }
+:is(h2, *.u-h2) { font-size: var(--wbd-6); }
+:is(h3, *.u-h3) { font-size: var(--wbd-4); }
+:is(h4, *.u-h4) { font-size: var(--wbd-2); }
+:is(h5, *.u-h5) { font-size: var(--wbd-1); }
+:is(h6, *.u-h6) { font-size: var(--wbd-0); }
+:is(sup, sub) { font-size: var(--wbd--2); }
+
+  
+// spacers exceptions
+// ------------------------------------------------------------------------
+.thm-1:not(.wp-block, :has(>.o-bg))+.thm-1, .thm-2:not(.wp-block, :has(>.o-bg))+.thm-2,
+.thm-3:not(.wp-block, :has(>.o-bg))+.thm-3, .thm-4:not(.wp-block, :has(>.o-bg))+.thm-4,
+.thm-5:not(.wp-block, :has(>.o-bg))+.thm-5, .thm-6:not(.wp-block, :has(>.o-bg))+.thm-6,
+.thm-01:not(.wp-block, :has(>.o-bg))+.thm-01, .thm-02:not(.wp-block, :has(>.o-bg))+.thm-02,
+.thm-03:not(.wp-block, :has(>.o-bg))+.thm-03, .thm-04:not(.wp-block, :has(>.o-bg))+.thm-04 {
+    padding-top: 0 !important;
+}
+
+// Divers bases particuliers
+// ------------------------------------------------------------------------
+
+// Décalage 1ère section par rapport au header du site. en front, en back, et dans l'editeur moderne
+:is(.g-body, .wp-admin .is-root-container > :is(*:first-of-type)) section:first-of-type [class*='o-ctn']:first-of-type {
+  margin-top: calc(var(--wbd-2xl-3xl) + var(--wp-admin--admin-bar--height, 0px));
+}
+
+// Fix supression des éléments Webkit search & checkbox
+[type="search"]::-webkit-search-decoration,
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-results-button,
+[type="search"]::-webkit-search-results-decoration,
+:is([filter-type*="checkbox"] [type="checkbox"], [filter-type*="checkbox"] [type="radio"]) {
+  display: none;
+}
+
+// Fix Webkit couleurs sur l'autofill
+:is(input, textarea, select):-webkit-autofill,
+:is(input, textarea, select):-webkit-autofill:hover,
+:is(input, textarea, select):-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s !important;
+  -webkit-box-shadow: 0 0 0px 999px transparent inset;
+  -webkit-text-fill-color: var(--thmTxt);
+  border-color: var(--thmTxt);
+}
+
+// force fixed bar (for mobil)
+#wpadminbar { position: fixed;}
+
+:is(a[href*='mailto:'], a[href*='tel:']) {
+  border-color: transparent;
+  &:after { display: none; }
+}
+
+.o-grp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wbd-s);
+}
+
+.u-ul2 :is(ul, ol) { 
+  column-count: 2;
+  column-gap: var(--wbd-m-2xl);
+  li { orphans: 50; }
+}
+
+.u-cont {
+  object-fit: contain;
+}
+
+//----------------------------------------------------------------------------//
+// end CSS

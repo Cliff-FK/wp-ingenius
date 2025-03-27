@@ -1,0 +1,73 @@
+/*----------------------------------------------------------------------------*\
+ * B HEADER
+\*----------------------------------------------------------------------------*/
+
+.b-hdr {
+    transition: var(--wbd-transi);
+    width: 100%;
+    z-index: 7;
+    left: 0;
+
+    &_slog {
+        line-height: 1.2;
+        max-width: var(--wbd-col-3);
+        @media all and (max-width: 1280px) { display: none; }
+    }
+
+    &_wrp {
+        display: flex;
+        flex-wrap: nowrap;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--wbd-xs) 0;
+        // gap: var(--wbd-m-l);
+        z-index: 2;
+    }
+
+    &_wrp>* {
+        &:after { margin-inline: var(--wbd-s); font-weight: bold; }
+        &:not(:first-child,:last-child):after { content: '|'; }
+    }
+
+    &_logo>* {
+        &:not(svg) { width: auto; }
+        display: inherit; //quifix svg alignement
+        max-height: calc(var(--wbd-l)* 1.1);
+        transition: var(--wbd-transi);
+        width: 100%;
+    }
+
+    &_logo {
+        margin-right: auto;
+    }
+
+    [role="search"] {
+        display: flex;
+        align-items: center;
+        &:hover [type="search"] {
+            width: var(--wbd-7xl);
+            opacity: 1;
+        }
+    }
+    [type="search"] {
+        position: absolute;
+        background: white;
+        border: 1px solid var(--thmTxt);
+        padding: var(--wbd-3xs) var(--wbd-s);
+        transition: var(--wbd-transi);
+        opacity: 0;
+        width: 0;
+        right: 0;
+    }
+    [type="submit"] {
+        position: relative;
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+// variantes de position admin/non-admin
+.g-body .b-hdr {
+    position: fixed;
+  }

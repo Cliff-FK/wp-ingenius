@@ -1,0 +1,53 @@
+/*----------------------------------------------------------------------------*\
+*  C MASONRY LIST MEDIA
+\*----------------------------------------------------------------------------*/
+
+.c-msnry {
+
+    display: grid;
+    position: relative;
+    gap: var(--wbd-gut-1) var(--wbd-gut-2);
+    left: calc(var(--progress)*-10% + 5%);
+  
+    &_el {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      overflow: hidden;
+      >:is([src], [wbd-src]) { height: 100%; }
+    }
+    &_el [src]+[class*='ttl'] {
+      margin-top: var(--wbd-xs);
+    }
+    
+    &_el-ttl {
+      font-size: var(--wbd-1);
+      font-weight: 700;
+    }
+
+    &_el-subttl {
+      opacity: .8;
+    }
+
+    &.tpl1 {
+        grid-template-areas: "a b c" "a b d";
+        grid-template-columns: 1fr 2fr 1fr;
+        
+        .c-msnry_el:nth-child(1) { grid-area: a; }
+        .c-msnry_el:nth-child(2) { grid-area: b; }
+        .c-msnry_el:nth-child(3) { grid-area: c; }
+        .c-msnry_el:nth-child(4) { grid-area: d; }
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+body.md:not(.lg) .c-msnry.tpl1 {
+    grid-template-areas: "a b b b" "c c d d";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+body:not(.md) .c-msnry {
+    grid-template-areas:"a" "b" "c" "d";
+    grid-template-columns: 1fr;
+}

@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------*\
+ * C CARD PROFIL SM SCSS
+\*----------------------------------------------------------------------------*/
+
+.c-crd-prfl {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
+
+    &_txt {
+        padding-top: var(--wbd-xs);
+        flex: 1;
+    }
+
+    &_ttl >* {
+        text-decoration: none !important;
+    }
+
+    &_terms {
+        text-transform: uppercase;
+        font-size: var(--wbd--1);
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

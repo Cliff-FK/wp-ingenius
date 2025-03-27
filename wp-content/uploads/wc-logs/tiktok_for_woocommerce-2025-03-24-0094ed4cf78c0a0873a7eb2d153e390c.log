@@ -1,0 +1,91 @@
+2025-03-24T15:12:47+00:00 DEBUG POST: https://ads.tiktok.com/marketing_api/api/developer/app/create_auto_approve/
+
+{"business_platform":"PROD","smb_id":"tt4b_woocommerce_67e1766feae61httplocalhostwebidiwp-ingeniuswp-admin","smb_name":"PROD","redirect_url":"http:\/\/localhost\/webidi\/wp-ingenius\/wp-admin\/"}
+ ajax: no
+2025-03-24T15:12:48+00:00 DEBUG Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Tt-Logid: 20250324151245E5EB63314403D1D107DB,20250324151245E5EB63314403D1D107DB
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-tt-trace-host: 01c6b7aae7a436c108e850f33dc36001c02c990a800f04f276274bbdb3ac424a283002a7d9d4f32d4a1e40f6d6b04c0422c9e54f7414df67a2143171719c4bfa665512e5a9f2333e3891395e0b049f2c9d23be3ba7caed5aab234a317f37f167223edc29492d0a74447b9eb53ee7b2735c
+x-tt-trace-id: 00-250324151245E5EB63314403D1D107DB-627BC00649529D4B-00
+Server: TLB
+Content-Encoding: gzip
+Content-Length: 213
+X-Origin-Response-Time: 68,23.45.206.85
+X-Akamai-Request-ID: 9ca3949d.28e36bf7
+Date: Mon, 24 Mar 2025 15:12:46 GMT
+X-Cache: TCP_MISS from a23-72-226-220.deploy.akamaitechnologies.com (AkamaiGHost/22.0.0.1-318443691900e5d3d78f5dd48f596007) (-)
+Connection: close
+Vary: Accept-Encoding
+X-Cache-Remote: TCP_MISS from a23-45-206-85.deploy.akamaitechnologies.com (AkamaiGHost/22.0.0.1-318443691900e5d3d78f5dd48f596007) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=182, origin; dur=68
+Server-Timing: inner; dur=62
+X-Parent-Response-Time: 236,23.72.226.220
+
+{"code":0,"msg":"ok","data":{"app_secret":"421d67589a6e4ab04847e635256410c09b04b9e6","app_id":"7485394272544358407","redirect_uri":"http:\/\/localhost\/webidi\/wp-ingenius\/wp-admin\/","external_data_key":"12cc2b27-77fe-4d09-b2b0-cb4e96ae5fc2"}}
+
+2025-03-24T15:24:53+00:00 DEBUG POST: https://business-api.tiktok.com/tbp/v2.0/business_profile/disconnect?external_data=
+
+{"business_platform":"WOO_COMMERCE","external_business_id":"tt4b_woocommerce_67e1766feae61"}
+ ajax: no
+2025-03-24T15:24:53+00:00 DEBUG Tt4b_Mapi_Class::tbp_post: Response: 
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 95
+X-Api-Deprecation-Info: API for Business Version 1.3 is now live. To avoid disruption to your business, we recommend you migrate all calls to v1.3 as soon as possible. Please visit our migration guide for more details: https://ads.tiktok.com/marketing_api/docs?id=1740029169927169
+X-Domain-Change-Info: We have moved to the new domain business-api.tiktok.com for API services after the Platform Upgrade on 09/30/2021. Please update all of your requests with the new domain if you haven't done so already. For more information, please visit https://ads.tiktok.com/marketing_api/docs?rid=esb88xalm6m&id=1709207085043713
+X-Tt-Logid: 2025032415245090D8B9A31E3DD3CCAD74
+x-tt-trace-host: 0152865909f8901b26f5e7b2ff364c9d330af94917f90bcdb95871b3a9b97780d4fd7dbc0a8122d0279a48eb96644b5dfb6e3060376cb8e5d1c798c227d2243867708a2492bc5745a56b5b26b125f721dda3403a25eb7df201c9b85327bdc6e09ddd7f4c5f68d65fa3131e0bf5fcb28ae0
+x-tt-trace-id: 00-25032415245090D8B9A31E3DD3CCAD74-100F45DD819EFD7C-00
+Server: TLB
+X-Origin-Response-Time: 15,184.85.101.78
+X-Akamai-Request-ID: 6663fee1.80466d29
+Expires: Mon, 24 Mar 2025 15:24:51 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 24 Mar 2025 15:24:51 GMT
+X-Cache: TCP_MISS from a96-17-105-210.deploy.akamaitechnologies.com (AkamaiGHost/22.0.0-e66582636229f729fb9b6b4bbf8842c2) (-)
+Connection: close
+X-Cache-Remote: TCP_MISS from a184-85-101-78.deploy.akamaitechnologies.com (AkamaiGHost/22.0.0-e66582636229f729fb9b6b4bbf8842c2) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=193, origin; dur=15
+Server-Timing: inner; dur=7
+X-Parent-Response-Time: 203,96.17.105.210
+
+{"code":40001,"message":"Permission denied.","request_id":"2025032415245090D8B9A31E3DD3CCAD74"}
+
+2025-03-24T15:24:53+00:00 DEBUG POST: https://business-api.tiktok.com/tbp/v2.0/shop/connection/disconnect?external_data=
+
+--- EMPTY STRING ---
+ ajax: no
+2025-03-24T15:24:53+00:00 DEBUG Tt4b_Mapi_Class::tts_shop_disconnect: Response: 
+
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 95
+X-Api-Deprecation-Info: API for Business Version 1.3 is now live. To avoid disruption to your business, we recommend you migrate all calls to v1.3 as soon as possible. Please visit our migration guide for more details: https://ads.tiktok.com/marketing_api/docs?id=1740029169927169
+X-Domain-Change-Info: We have moved to the new domain business-api.tiktok.com for API services after the Platform Upgrade on 09/30/2021. Please update all of your requests with the new domain if you haven't done so already. For more information, please visit https://ads.tiktok.com/marketing_api/docs?rid=esb88xalm6m&id=1709207085043713
+X-Tt-Logid: 2025032415245157E7214265332527B821
+x-tt-trace-host: 0152865909f8901b26f5e7b2ff364c9d330af94917f90bcdb95871b3a9b97780d4fd7dbc0a8122d0279a48eb96644b5dfbf6d063d83815d135e711ea3e1a1294fbe37353a9924632b20d569bd6786e57b40f4b8e0f28ce9c9b5ed804d1892e030cc84a1d70d2f3c48bc66d5133f53f0467
+x-tt-trace-id: 00-25032415245157E7214265332527B821-32E6B250213ABF8B-00
+Server: TLB
+X-Origin-Response-Time: 16,184.85.101.78
+X-Akamai-Request-ID: 66691c75.8046722d
+Expires: Mon, 24 Mar 2025 15:24:52 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 24 Mar 2025 15:24:52 GMT
+X-Cache: TCP_MISS from a96-17-105-210.deploy.akamaitechnologies.com (AkamaiGHost/22.0.0-e66582636229f729fb9b6b4bbf8842c2) (-)
+Connection: close
+X-Cache-Remote: TCP_MISS from a184-85-101-78.deploy.akamaitechnologies.com (AkamaiGHost/22.0.0-e66582636229f729fb9b6b4bbf8842c2) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=167, origin; dur=16
+Server-Timing: inner; dur=7
+X-Parent-Response-Time: 179,96.17.105.210
+
+{"code":40001,"message":"Permission denied.","request_id":"2025032415245157E7214265332527B821"}
+

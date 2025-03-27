@@ -1,0 +1,201 @@
+/*----------------------------------------------------------------------------*\
+ * Deficons
+\*----------------------------------------------------------------------------*/
+// https://transfonter.org
+// https://icomoon.io/app
+
+[class*='o-deficon'][class] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Deficons' !important;
+    text-transform: none;
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .o-deficon-chevron-left:before {
+    content: "\e91b";
+  }
+  .o-deficon-chevrons-left:before {
+    content: "\e934";
+  }
+  .o-deficon-chevrons-right:before {
+    content: "\e932";
+  }
+  .o-deficon-chevron-right:before {
+    content: "\e933";
+  }
+  .o-deficon-minus:before {
+    content: "\e904";
+  }
+  .o-deficon-info:before {
+    content: "\e905";
+  }
+  .o-deficon-check:before {
+    content: "\e906";
+  }
+  .o-deficon-favorite_outline:before {
+    content: "\e907";
+  }
+  .o-deficon-star_outline:before {
+    content: "\e908";
+  }
+  .o-deficon-star:before {
+    content: "\e909";
+  }
+  .o-deficon-favorite:before {
+    content: "\e90a";
+  }
+  .o-deficon-facebook:before {
+    content: "\e90b";
+  }
+  .o-deficon-help-with-circle:before {
+    content: "\e902";
+  }
+  .o-deficon-exclamation-solid:before {
+    content: "\e903";
+  }
+  .o-deficon-search:before {
+    content: "\e90c";
+  }
+  .o-deficon-youtube-play:before {
+    content: "\e90d";
+  }
+  .o-deficon-linkedin:before {
+    content: "\e90e";
+  }
+  .o-deficon-instagram:before {
+    content: "\e90f";
+  }
+  .o-deficon-brand:before {
+    content: "\e90f";
+  }
+  .o-deficon-social:before {
+    content: "\e90f";
+  }
+  .o-deficon-twitter:before {
+    content: "\e910";
+  }
+  .o-deficon-tweet:before {
+    content: "\e910";
+  }
+  .o-deficon-pinterest:before {
+    content: "\e911";
+  }
+  .o-deficon-social2:before {
+    content: "\e911";
+  }
+  .o-deficon-adjustments-horizontal:before {
+    content: "\e900";
+  }
+  .o-deficon-archive-box:before {
+    content: "\e912";
+  }
+  .o-deficon-arrow-down-on-square:before {
+    content: "\e913";
+  }
+  .o-deficon-arrow-down-tray:before {
+    content: "\e914";
+  }
+  .o-deficon-arrow-long-left:before {
+    content: "\e935";
+  }
+  .o-deficon-arrow-long-right:before {
+    content: "\e915";
+  }
+  .o-deficon-arrow-path:before {
+    content: "\e936";
+  }
+  .o-deficon-arrow-right:before {
+    content: "\e916";
+  }
+  .o-deficon-arrow-right-circle:before {
+    content: "\e917";
+  }
+  .o-deficon-arrow-small-left:before {
+    content: "\e91a";
+  }
+  .o-deficon-arrow-small-right:before {
+    content: "\e901";
+  }
+  .o-deficon-chat-bubble-left-right:before {
+    content: "\e918";
+  }
+  .o-deficon-check-circle:before {
+    content: "\e919";
+  }
+  .o-deficon-clock:before {
+    content: "\e91c";
+  }
+  .o-deficon-cloud-arrow-down:before {
+    content: "\e91d";
+  }
+  .o-deficon-envelope:before {
+    content: "\e91e";
+  }
+  .o-deficon-eye:before {
+    content: "\e91f";
+  }
+  .o-deficon-flag:before {
+    content: "\e920";
+  }
+  .o-deficon-folder-open:before {
+    content: "\e921";
+  }
+  .o-deficon-globe-europe-africa:before {
+    content: "\e922";
+  }
+  .o-deficon-hand-thumb-up:before {
+    content: "\e923";
+  }
+  .o-deficon-heart:before {
+    content: "\e924";
+  }
+  .o-deficon-home:before {
+    content: "\e925";
+  }
+  .o-deficon-lock-closed:before {
+    content: "\e926";
+  }
+  .o-deficon-map-pin:before {
+    content: "\e927";
+  }
+  .o-deficon-paper-airplane:before {
+    content: "\e928";
+  }
+  .o-deficon-pencil-square:before {
+    content: "\e929";
+  }
+  .o-deficon-phone:before {
+    content: "\e92a";
+  }
+  .o-deficon-play:before {
+    content: "\e92b";
+  }
+  .o-deficon-shield-check:before {
+    content: "\e92c";
+  }
+  .o-deficon-user:before {
+    content: "\e92d";
+  }
+  .o-deficon-user-circle:before {
+    content: "\e92e";
+  }
+  .o-deficon-user-group:before {
+    content: "\e92f";
+  }
+  .o-deficon-x-circle:before {
+    content: "\e930";
+  }
+  .o-deficon-x-mark:before {
+    content: "\e931";
+  }
+  
+  
+/*----------------------------------------------------------------------------*/
+// end CSS

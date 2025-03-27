@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------*\
+   *  TRANSFORME L'ELEMENT HTML CHOISI EN BACKGROUND
+\*----------------------------------------------------------------------------*/
+
+[class*='o-bg'], [class*='o-bg'] :is(img, video, iframe,
+embed, lottie-player) {
+    object-fit: cover;
+    position: absolute;
+    object-position: center;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+
+// gestion de la parallaxe
+[data-scroll][data-scroll-speed] {
+    max-height: initial !important;
+    height: clamp(100%, 10vw + 100%, 130%) !important;
+    top: clamp(0%, -10vw, -20%) !important;
+}
+
+/*----------------------------------------------------------------------------*/
+// end CSS

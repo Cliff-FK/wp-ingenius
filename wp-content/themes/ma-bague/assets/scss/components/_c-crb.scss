@@ -1,0 +1,27 @@
+/*----------------------------------------------------------------------------*\
+ * C CRUMB (breadcrumb)
+\*----------------------------------------------------------------------------*/
+
+.c-crb {
+  display: flex;
+  align-items: center;
+  padding: var(--wbd-3xs-2xs) var(--wbd-m-l) var(--wbd-3xs-2xs) 0;
+  gap: var(--wbd-2xs);
+  
+  &_item:not(:last-child) &_lnk { opacity: .5; }
+  &_item:last-child &_lnk { font-weight: 500; }
+  
+  &_spr {
+    user-select: none;
+    font-weight: bold;
+    color: var(--thmAcc);
+    line-height: .4;
+  }
+
+  &_lnk {
+    color: var(--thmAcc);
+    line-height: 2;
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

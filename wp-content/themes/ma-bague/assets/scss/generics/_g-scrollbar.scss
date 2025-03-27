@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------*\
+ * G - scroll BAR
+/*----------------------------------------------------------------------------*/
+
+.g-scrollbar {
+    position: fixed;
+    height: var(--wbd-3xs);
+    width: 100vw;
+    z-index: 7;
+
+    &_inner {
+        content: '';
+        transition: var(--wbd-transi);
+        background: var(--wp--preset--color--thm-3);
+        height: inherit;
+        display: block;
+        width: 0%;
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+// Scrollbar design
+html:not(.wp-toolbar):not(.block-editor-block-preview__content-iframe) {
+    *::-webkit-scrollbar {
+      background: color-mix(in srgb, var(--wp--preset--color--thm-1) 15%, var(--wp--preset--color--thm-02));
+      width: 6px; height: 6px;
+    }
+    *::-webkit-scrollbar-thumb {
+      background: var(--wp--preset--color--thm-3);
+    }
+  }

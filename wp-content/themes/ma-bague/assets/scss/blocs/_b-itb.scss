@@ -1,0 +1,34 @@
+/*----------------------------------------------------------------------------*\
+ * B INTER-BLOC(S) SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-itb {
+  position: relative;
+  z-index: 1;
+
+  [class*='o-ctn'] {
+    margin-block: calc(var(--wbd-gut-2) * -1); //quickfix ligne blanche
+  }
+
+  &_wrp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &_el {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: var(--wbd-xs) var(--wbd-m-l);
+    flex: 0 1 var(--wbd-col-3);
+    gap: var(--wbd-s-m);
+  }
+
+  // augmentation de l'espace sur le bloc suivant
+  + section > [class*='o-ctn']  {
+    padding-top: var(--wbd-l);
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end global CSS

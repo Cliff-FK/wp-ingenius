@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------*\
+  *  U SKEW
+\*----------------------------------------------------------------------------*/
+
+[class*='u-skw'] {
+  transform: skew(var(--wbd-skew)) translateZ(0);
+}
+
+[class*='u-skw'] :is(x, img, video, svg) {
+  transform: skew(calc(var(--wbd-skew) * -1)) translateZ(0);
+}
+[class*='u-skw'] x {
+  display: inline-block;
+}
+
+.u-skw-1 {
+  --wbd-skew: 25deg;
+}
+
+.u-skw-2 {
+  --wbd-skew: -25deg;
+}
+
+
+/*----------------------------------------------------------------------------*/
+// end CSS

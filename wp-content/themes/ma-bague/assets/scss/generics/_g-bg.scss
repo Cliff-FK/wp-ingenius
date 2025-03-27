@@ -1,0 +1,35 @@
+/*----------------------------------------------------------------------------*\
+    * U BG AFTER
+    * AJOUTE À l'ELEMENT HTML CHOISI UN BACKGROUND EN :AFTER
+\*----------------------------------------------------------------------------*/
+
+[class*="thm-"]:not([data-block]) {
+    position: relative;
+}
+
+[class*='thm-']:not([data-block]):after {
+    content: '';
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: initial;
+    transform: translateX(-50%);
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    top: 0;
+}
+
+[class*='thm-']:not([data-block]):after {
+    z-index: -5;
+}
+[class*='thm-'] [class*='thm-']:not([data-block]):after {
+    z-index: -4;
+}
+[class*='thm-'] [class*='thm-'] [class*='thm-']:not([data-block]):after {
+    z-index: -3;
+}
+
+/*----------------------------------------------------------------------------*/
+// end CSS

@@ -1,0 +1,79 @@
+/*----------------------------------------------------------------------------*\
+*  G BODY
+\*----------------------------------------------------------------------------*/
+
+body {
+  &:before {
+    content: '';
+    position: fixed;
+    pointer-events: none;
+    transition: var(--wbd-transi);
+    background: color-mix(in srgb, black, var(--thmAcc) 5%);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 7;
+  }
+
+  &:is(.mdl-open, .sidebar-open):before {
+    pointer-events: initial;
+    opacity: .6;
+  }
+
+  &.mdl-open .wp-site-blocks {
+    overflow: hidden;
+    >* { filter: blur(8px); }
+  }
+
+  &:not(.sidebar-open) .g-mob-nav {
+    transform: translateX(100%);
+    pointer-events: none;
+  }
+
+  &.mdl-open .b-hdr {
+    z-index: 6;
+  }
+
+  &.sidebar-open {
+    
+    .burger {
+      outline: none;
+      .c-brg_bar { position: absolute; }
+      .c-brg_wrp { justify-content: center; }
+      .c-brg_bar:first-child { transform: rotate(45deg); }
+      .c-brg_bar:nth-child(2) { opacity: 0; transform: scale(0); }
+      .c-brg_bar:last-child { transform: rotate(-45deg); }
+    }
+
+    .g-mob-nav {
+      transform: translateX(0%);
+      pointer-events: initial;
+      z-index: 1;
+    }
+  }
+
+  .o-fix { color: var(--thmTxt); transform: translateY(0%); }
+  .o-fix-down:not(.brg-open) { transform: translateY(-100%); }
+  :is(.o-fix:not(.o-fix-down), &.sidebar-open .o-fix) { background: var(--thmBg); box-shadow: 0 1px 0px 0 rgba(0,0,0,.2); }
+  .o-fix .c-brg_bar {background: var(--thmBg); }
+
+
+  :is(a,button):has(.menu-item_ico-med) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wbd-2xs);
+  }
+
+  .menu-item.ico-only span {
+    display: none;
+  }
+
+  .menu-item_ico-med {
+    max-height: var(--wbd-3);
+    max-width: var(--wbd-4);
+    font-size: var(--wbd-3);
+  }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

@@ -1,0 +1,19 @@
+{
+  "name": "wp-ingenius",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite build --watch",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "postcss-url": "^10.1.3",
+    "sass": "^1.86.0",
+    "vite": "^6.2.3"
+  }
+}

@@ -1,0 +1,90 @@
+/*----------------------------------------------------------------------------*\
+ * BASE IMPORT SCSS
+/*----------------------------------------------------------------------------*/
+
+// Import vendors libs
+// @use "./vendors/bootstrap/bootstrap.scss";
+@use "./vendors/swiper.min.scss";
+@use "./vendors/unpoly.min.scss";
+@use "./vendors/lenis.min.scss";
+
+@use "settings/s-reset.scss";
+@use "settings/s-spacer.scss";
+@use "settings/s-keyframe.scss";
+@use "settings/s-transition.scss";
+@use "settings/s-typography.scss";
+@use "settings/s-font.scss";
+
+@use "utilities/u-anim.scss";
+@use "utilities/u-flt.scss";
+@use "utilities/u-spc.scss";
+@use "utilities/u-lined.scss";
+@use "utilities/u-flex.scss";
+
+@use "objects/o-ctn.scss";
+@use "objects/o-mce.scss";
+@use "objects/o-bg.scss";
+@use "objects/o-deficons.scss";
+@use "objects/o-framed.scss";
+@use "objects/o-ratio.scss";
+@use "objects/o-mdl.scss";
+@use "objects/o-frm.scss";
+
+@use "generics/g-cursor.scss";
+@use "generics/g-desk-nav.scss";
+@use "generics/g-mob-nav.scss";
+@use "generics/g-pagination.scss";
+@use "generics/g-scrollbar.scss";
+@use "generics/g-select.scss";
+@use "generics/g-slider.scss";
+@use "generics/g-bases.scss";
+@use "generics/g-body.scss";
+@use "generics/g-thm.scss";
+@use "generics/g-cta.scss";
+@use "generics/g-bg.scss";
+
+@use "blocs/b-frm.scss";
+@use "blocs/b-hdr.scss";
+@use "blocs/b-ftr.scss";
+@use "blocs/b-hero.scss";
+@use "blocs/b-hero-sld.scss";
+@use "blocs/b-list-atouts.scss";
+@use "blocs/b-list-posts.scss";
+@use "blocs/b-sld-posts.scss";
+@use "blocs/b-wall.scss";
+@use "blocs/b-gall-lg.scss";
+@use "blocs/b-txt-med.scss";
+@use "blocs/b-steps.scss";
+@use "blocs/b-tiny.scss";
+@use "blocs/b-ban.scss";
+@use "blocs/b-acc.scss";
+@use "blocs/b-story.scss";
+@use "blocs/b-tabs.scss";
+@use "blocs/b-itb.scss";
+@use "blocs/b-teasing.scss";
+@use "blocs/b-bvv.scss";
+
+@use "components/c-crd-post.scss";
+@use "components/c-crd-prog.scss";
+@use "components/c-crd-lot.scss";
+@use "components/c-crd-prfl.scss";
+@use "components/c-ban-info.scss";
+@use "components/c-hdr.scss";
+@use "components/c-flts.scss";
+@use "components/c-brg.scss";
+@use "components/c-share.scss";
+@use "components/c-socials.scss";
+@use "components/c-msnry.scss";
+@use "components/c-mdl.scss";
+@use "components/c-gdp.scss";
+@use "components/c-crb.scss";
+@use "components/c-acc.scss";
+@use "components/c-tabs.scss";
+
+/*----------------------------------------------------------------------------*/
+// end CSS
+
+
+* {
+    background: silver !important;
+}

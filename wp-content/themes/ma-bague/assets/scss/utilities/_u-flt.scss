@@ -1,0 +1,26 @@
+/*----------------------------------------------------------------------------*\
+   *  U FILTER POUR ASSOMBRIR un ELEMENT
+ \*----------------------------------------------------------------------------*/
+
+ .u-flt0:before { opacity: .00; }
+ .u-flt1:before { opacity: .20; }
+ .u-flt2:before { opacity: .30; }
+ .u-flt3:before { opacity: .40; }
+ .u-flt4:before { opacity: .50; }
+ .u-flt5:before { opacity: .60; }
+ .u-flt6:before { opacity: .80; }
+
+[class*="u-flt"]:before {
+    content: '';
+    mix-blend-mode: normal;
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+/*----------------------------------------------------------------------------*/
+// end CSS

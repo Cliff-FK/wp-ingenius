@@ -1,0 +1,55 @@
+/*----------------------------------------------------------------------------*\
+ * B LIST ATOUTS SCSS
+\*----------------------------------------------------------------------------*/
+
+.b-list-atouts {
+
+    [class*='o-ctn'] {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--wbd-gut-2);
+    }
+
+    .c-hdr {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &_wrp {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--wbd-gut-1);
+        >* { flex: 1 1 var(--wbd-col-2); }
+    }
+
+    &_el {
+        display: flex;
+        text-align: center;
+        border: 1px solid;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--wbd-gut-1);
+        gap: var(--wbd-3xs);
+        height: 100%;
+    
+        .c-med {
+            max-width: var(--wbd-2xl);
+            margin: 0 auto var(--wbd-xs) auto;
+            aspect-ratio: 1/1;
+        }
+    
+        .c-wisy {
+            font-size: var(--wbd-0);
+        }
+    
+        &-ttl {
+            font-size: var(--wbd-2);
+        }
+
+    }
+
+/*----------------------------------------------------------------------------*/
+} // end CSS

@@ -1,0 +1,75 @@
+/*----------------------------------------------------------------------------*\
+ * B STORY SCSS
+ * utliser avec vendors js masonry.min.js
+ * beaucoup de tatonnement avec des variables pour tout caler, qq chiffres magiques..
+\*----------------------------------------------------------------------------*/
+
+.b-story {
+    overflow: hidden; // à cause des animations qui décale le viewport avant d'apparaitre
+
+    [class*='o-ctn'] {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: var(--wbd-gut-2);
+    }
+
+    &_items {
+        max-width: var(--wbd-col-9);
+        width: 100%;
+    }
+    &_items:after {
+        content: '';
+        position: absolute;
+        top: var(--wbd-m-2xl);
+        height: calc(100% - var(--wbd-m-4xl));
+        border-left: clamp(0rem, -0.0811rem + 0.1689vw, 0.0625rem) solid;
+        left: 50%;
+        z-index:-1;
+    }
+    
+    &_el {
+        padding-inline: var(--wbd-gut-2);
+        width: 50%;
+    }
+    &_el:not(:first-child) {
+        margin-top: var(--wbd-gut-4);
+    }
+    &_el .c-med {
+        height: auto;
+        margin-bottom: var(--wbd-s);
+        transform: scale(calc(var(--progress) / 6 + 0.9));
+        aspect-ratio: 1/1;
+    }
+
+    &_el:after {
+        display: block;
+        position: absolute;
+        box-sizing: content-box;
+        background: var(--thmAcc);
+        border: var(--wbd--2) solid var(--thmTxt);
+        transform: translate(50%, -50%);
+        height: var(--wbd-2xs-xs);
+        width: var(--wbd-2xs-xs);
+        border-radius: 100%;
+        right: 0;
+        top: 33%;
+    }
+
+    &_el:nth-child(even):after {
+        background: var(--thmTxt);
+        border-color: var(--thmAcc);
+        transform: translate(-50%, -50%);
+        left: 0;
+    }
+
+    
+/*----------------------------------------------------------------------------*/
+} // end CSS
+
+body.md .b-story_el {
+    &:after { content: ''; }
+}
+body.xs:not(.md) .b-story_el {
+    width: 100%;
+}

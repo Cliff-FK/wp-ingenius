@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------*\
+ * TYPOGRAPHY VARIABLES
+ * https://utopia.fyi
+ * https://typescale.com
+ * https://www.fluid-type-scale.com
+ * https://fluid-typography.netlify.app
+ * https://modern-fluid-typography.vercel.app
+\*----------------------------------------------------------------------------*/
+/* @link https://utopia.fyi/type/calculator?c=512,16,1.125,1360,18,1.2,10,6,&s=0.75|0.5|0.25|0.15,1.5|2|3|4|5.5|7|9|11|13|15|17|20|22|25,m-xl|m-2xl|m-3xl|m-4xl|l-2xl|l-3xl|l-4xl&g=2xs,xl,2xl,12 */
+ 
+body {
+  --wbd--6: clamp(0.3349rem, 0.5394rem + -0.2406cqi, 0.4624rem);
+  --wbd--5: clamp(0.4019rem, 0.5917rem + -0.2233cqi, 0.5202rem);
+  --wbd--4: clamp(0.4823rem, 0.6475rem + -0.1944cqi, 0.5853rem);
+  --wbd--3: clamp(0.5787rem, 0.7066rem + -0.1504cqi, 0.6584rem);
+  --wbd--2: clamp(0.6944rem, 0.7687rem + -0.0874cqi, 0.7407rem);
+  --wbd--1: clamp(0.8333rem, 0.8333rem + 0cqi, 0.8333rem);
+  --wbd-0: clamp(0.9375rem, 0.8998rem + 0.1179cqi, 1rem);
+  --wbd-1: clamp(1.0547rem, 0.967rem + 0.2742cqi, 1.2rem);
+  --wbd-2: clamp(1.1865rem, 1.0335rem + 0.4783cqi, 1.44rem);
+  --wbd-3: clamp(1.3348rem, 1.0975rem + 0.7418cqi, 1.728rem);
+  --wbd-4: clamp(1.5017rem, 1.1564rem + 1.0791cqi, 2.0736rem);
+  --wbd-5: clamp(1.6894rem, 1.207rem + 1.5074cqi, 2.4883rem);
+  --wbd-6: clamp(1.9006rem, 1.2452rem + 2.0479cqi, 2.986rem);
+  --wbd-7: clamp(2.1382rem, 1.2657rem + 2.7265cqi, 3.5832rem);
+  --wbd-8: clamp(2.4054rem, 1.2616rem + 3.5743cqi, 4.2998rem);
+  --wbd-9: clamp(2.7061rem, 1.2246rem + 4.6296cqi, 5.1598rem);
+  --wbd-10: clamp(3.0444rem, 1.1441rem + 5.9384cqi, 6.1917rem);
+}
+
+/*----------------------------------------------------------------------------*/
+// end CSS
