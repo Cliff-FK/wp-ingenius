@@ -1,0 +1,44 @@
+{
+  "assets/fonts/DMsans/subset-DMSans-Regular.woff2": {
+    "file": "subset-DMSans-Regular-DZOgdJyD.woff2",
+    "src": "assets/fonts/DMsans/subset-DMSans-Regular.woff2"
+  },
+  "assets/fonts/EBgaramond/subset-EBGaramond-BoldItalic.woff2": {
+    "file": "subset-EBGaramond-BoldItalic-CbdYLMIc.woff2",
+    "src": "assets/fonts/EBgaramond/subset-EBGaramond-BoldItalic.woff2"
+  },
+  "assets/fonts/EBgaramond/subset-EBGaramond-Italic.woff2": {
+    "file": "subset-EBGaramond-Italic-CrlcPDiu.woff2",
+    "src": "assets/fonts/EBgaramond/subset-EBGaramond-Italic.woff2"
+  },
+  "assets/fonts/deficons/Deficons.woff2": {
+    "file": "Deficons-DW_V4C52.woff2",
+    "src": "assets/fonts/deficons/Deficons.woff2"
+  },
+  "assets/js/_libs/unpoly.min.js": {
+    "file": "unpoly-Cp0e5Bai.js",
+    "name": "unpoly",
+    "src": "assets/js/_libs/unpoly.min.js",
+    "isEntry": true
+  },
+  "assets/js/main.js": {
+    "file": "main-DG71Pni4.js",
+    "name": "main",
+    "src": "assets/js/main.js",
+    "isEntry": true,
+    "css": [
+      "main-BxVdvYGM.css"
+    ],
+    "assets": [
+      "Deficons-DW_V4C52.woff2",
+      "subset-EBGaramond-Italic-CrlcPDiu.woff2",
+      "subset-EBGaramond-BoldItalic-CbdYLMIc.woff2",
+      "subset-DMSans-Regular-DZOgdJyD.woff2"
+    ]
+  },
+  "assets/scss/admin.scss": {
+    "file": "admin-azrxAEOf.css",
+    "src": "assets/scss/admin.scss",
+    "isEntry": true
+  }
+}

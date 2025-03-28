@@ -1,77 +1,54 @@
+import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import postcssUrl from 'postcss-url'
 
-/*---------------------------------------------------------------------------*\
-  Paramètres globaux
-\*---------------------------------------------------------------------------*/
-const configParams = {
-  paths: {
-    root: __dirname,
-    src: resolve(__dirname, 'assets'),
-    dist: resolve(__dirname, 'dist'),
-    js: 'js',
-    css: 'css',
-    fonts: 'fonts',
-    images: 'images',
-    svg: 'svg'
-  },
-  entries: {
-    main: 'js/main.js',
-    unpoly: 'js/_libs/unpoly.min.js', // Fichier déjà minifié
-    admin: 'scss/admin.scss'
-  },
-  // Option PostCSS pour réécriture d'URLs dans les CSS
-  postcssUrlOptions: {
-    pattern: /^(?:(?:\.\.\/)|(?:\.\/))+/, // Pour capturer tous les préfixes relatifs
-    replacement: '../'
-  }
+const WP_THEME_PATH = 'wp-content/themes';  
+const HOST = 'localhost'; // Nom du serveur
+const PORT = 3000; // Port du serveur
+
+function getBaseUrl() {
+  const currentPath = process.cwd().replace(/\\+/g, '/');
+  const themePart = currentPath.split('wp-content/themes')[1];
+  if(themePart) return `/${'wp-content/themes'}${themePart}`;
+  // if(themePart) return `http://${HOST}:${PORT}/${WP_THEME_PATH}${themePart}`;
+  return '/';
 }
-
-/*---------------------------------------------------------------------------*\
-  Configuration Vite automatisé selon config ci-dessus
-\*---------------------------------------------------------------------------*/
+  
 export default defineConfig({
-  css: {
-    postcss: {
-      plugins: [
-        postcssUrl({
-          url: ({ url }) =>
-            typeof url === 'string' && url.startsWith('.')
-              ? url.replace(configParams.postcssUrlOptions.pattern, configParams.postcssUrlOptions.replacement)
-              : url
-        })
-      ]
+
+  resolve: {
+    alias: {
+      '../../': '../',
     }
   },
+
   build: {
-    assetsDir: '', // On gère la répartition dans output.assetFileNames
-    manifest: false,
-    emptyOutDir: true,
-    outDir: configParams.paths.dist,
+    assetsDir: '',
+    manifest: 'manifest.json',
+    sourcemap: false,
+    // base: getBaseUrl(),
     rollupOptions: {
-      input: Object.fromEntries(
-        Object.entries(configParams.entries).map(([key, relativePath]) => [
-          key, resolve(configParams.paths.src, relativePath)
-        ])
-      ),
-      output: {
-        entryFileNames: `${configParams.paths.js}/[name].js`,
-        chunkFileNames: `${configParams.paths.js}/[name].js`,
-        assetFileNames: assetInfo => {
-          if (assetInfo.name) {
-            if (/woff|ttf/.test(assetInfo.name)) return `${configParams.paths.fonts}/[name].[ext]`
-            if (/jpg|jpeg|png/.test(assetInfo.name)) return `${configParams.paths.images}/[name].[ext]`
-            if (/svg/.test(assetInfo.name)) return `${configParams.paths.svg}/[name].[ext]`
-            if (/css/.test(assetInfo.name)) return `${configParams.paths.css}/[name].[ext]`
-          }
-          return '[name].[ext]'
-        }
-      }
-    }
+      input: {
+        main: resolve(__dirname, 'assets/js/main.js'),
+        unpoly: resolve(__dirname, 'assets/js/_libs/unpoly.min.js'),  // Ce fichier sera minifié aussi
+        admin: resolve(__dirname, 'assets/scss/admin.scss'),
+      },
+    },
   },
-  server: {
-    port: 3000,
-    hmrHost: 'localhost'
-  }
+
+  plugins: [
+    sassGlobImports()
+  ],
+
+  optimizeDeps: {
+    exclude: [
+      'jquery',
+      'desandro-matches-selector',
+      'ev-emitter',
+      'get-size',
+      'fizzy-ui-utils',
+      'outlayer',
+    ],
+  },
+  
 })

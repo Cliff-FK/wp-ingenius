@@ -17,8 +17,6 @@ body {
 @font-face {
     font-family: 'Deficons';
     src: url('../../fonts/deficons/Deficons.woff2') format('woff2');
-    // src: url('../../fonts/deficons/Deficons.woff2') format('woff2'),
-    // url('../wp-content/themes/themezero/fonts/deficons/Deficons.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -27,8 +25,6 @@ body {
 @font-face {
     font-family: 'EB Garamond';
     src: url('../../fonts/EBgaramond/subset-EBGaramond-Italic.woff2') format('woff2');
-    // src: url('../../fonts/EBgaramond/subset-EBGaramond-Italic.woff2') format('woff2'),
-    // url('../wp-content/themes/themezero/fonts/EBgaramond/subset-EBGaramond-Italic.woff2') format('woff2');
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -37,8 +33,6 @@ body {
 @font-face {
     font-family: 'EB Garamond';
     src: url('../../fonts/EBgaramond/subset-EBGaramond-BoldItalic.woff2') format('woff2');
-    // src: url('../../fonts/EBgaramond/subset-EBGaramond-BoldItalic.woff2') format('woff2'),
-    // url('../wp-content/themes/themezero/fonts/EBgaramond/subset-EBGaramond-BoldItalic.woff2') format('woff2');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -47,8 +41,6 @@ body {
 @font-face {
     font-family: 'DM Sans';
     src: url('../../fonts/DMsans/subset-DMSans-Regular.woff2') format('woff2');
-    // src: url('../../fonts/DMsans/subset-DMSans-Regular.woff2') format('woff2'),
-    // url('../wp-content/themes/themezero/fonts/DMsans/subset-DMSans-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -57,3 +49,4 @@ body {
 
 /*----------------------------------------------------------------------------*/
 // end CSS
+

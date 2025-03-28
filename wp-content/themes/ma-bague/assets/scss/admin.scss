@@ -2,10 +2,10 @@
  * EDITOR STYLE WRAPPER CORRECTION
 \*----------------------------------------------------------------------------*/
 
-#tinymce {
+  #tinymce {
     padding: var(--wbd-xs);
   }
-  
+
   .block-editor-iframe__body :is([data-scroll-class^=u-fade], [data-scroll-class^=u-zoom], [data-scroll-class^=u-slide]) {
     transform: initial;
     opacity: 1;
